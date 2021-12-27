@@ -49,7 +49,7 @@ class WednesdayViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
-       
+             
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
         cell.textLabel?.text = items3![indexPath.row].item

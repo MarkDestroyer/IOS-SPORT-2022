@@ -22,6 +22,12 @@
 		82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */; };
 		8282AA2C27769702009471C5 /* MondayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2B27769702009471C5 /* MondayViewController.swift */; };
 		8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2D2776988C009471C5 /* EntryViewController.swift */; };
+		82A530BE277BC4D800926ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A530BD277BC4D800926ABE /* GoogleService-Info.plist */; };
+		82A530C1277BC8F400926ABE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C0277BC8F400926ABE /* LoginViewController.swift */; };
+		82A530C3277BC97400926ABE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C2277BC97400926ABE /* HomeViewController.swift */; };
+		82A530C7277BD36E00926ABE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C6277BD36E00926ABE /* ProfileViewController.swift */; };
+		82A530C9277BDBC700926ABE /* PersonDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C8277BDBC700926ABE /* PersonDB.swift */; };
+		82A530CB277BDDB500926ABE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530CA277BDDB500926ABE /* UserModel.swift */; };
 		D8D4895BCF01039A3879B2D8 /* Pods_Sport_2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD59EB16C9E805A31A8BE446 /* Pods_Sport_2022.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +51,12 @@
 		82576DD9277470BE003A40B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8282AA2B27769702009471C5 /* MondayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayViewController.swift; sourceTree = "<group>"; };
 		8282AA2D2776988C009471C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		82A530BD277BC4D800926ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82A530C0277BC8F400926ABE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		82A530C2277BC97400926ABE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		82A530C6277BD36E00926ABE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		82A530C8277BDBC700926ABE /* PersonDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDB.swift; sourceTree = "<group>"; };
+		82A530CA277BDDB500926ABE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AD59EB16C9E805A31A8BE446 /* Pods_Sport_2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sport_2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +120,7 @@
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
+				82A530BF277BC8E500926ABE /* Auth */,
 				82576DCA277470BC003A40B1 /* Sport 2022 */,
 				82576DC9277470BC003A40B1 /* Products */,
 				4FC0DB907434DAAA75A12EDF /* Pods */,
@@ -132,9 +145,22 @@
 				82576DD1277470BC003A40B1 /* Main.storyboard */,
 				82576DD4277470BE003A40B1 /* Assets.xcassets */,
 				82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */,
+				82A530BD277BC4D800926ABE /* GoogleService-Info.plist */,
 				82576DD9277470BE003A40B1 /* Info.plist */,
 			);
 			path = "Sport 2022";
+			sourceTree = "<group>";
+		};
+		82A530BF277BC8E500926ABE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				82A530C0277BC8F400926ABE /* LoginViewController.swift */,
+				82A530C2277BC97400926ABE /* HomeViewController.swift */,
+				82A530C6277BD36E00926ABE /* ProfileViewController.swift */,
+				82A530C8277BDBC700926ABE /* PersonDB.swift */,
+				82A530CA277BDDB500926ABE /* UserModel.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		82CBF8E32775C8F8009B9926 /* Days */ = {
@@ -227,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */,
+				82A530BE277BC4D800926ABE /* GoogleService-Info.plist in Resources */,
 				82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */,
 				82576DD3277470BC003A40B1 /* Main.storyboard in Resources */,
 			);
@@ -286,12 +313,17 @@
 				821C310D27772B8200501189 /* EntryViewController4.swift in Sources */,
 				821C310B27772AFC00501189 /* ThursdayViewController.swift in Sources */,
 				821C31002777179600501189 /* TuesdayViewController.swift in Sources */,
+				82A530C3277BC97400926ABE /* HomeViewController.swift in Sources */,
+				82A530C9277BDBC700926ABE /* PersonDB.swift in Sources */,
 				821C31022777195900501189 /* EntryViewController2.swift in Sources */,
+				82A530CB277BDDB500926ABE /* UserModel.swift in Sources */,
 				821C31102777304B00501189 /* FridayViewController.swift in Sources */,
 				821C31122777305600501189 /* EntryViewController5.swift in Sources */,
 				8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */,
 				821C31052777224300501189 /* WednesdayViewController.swift in Sources */,
 				82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */,
+				82A530C7277BD36E00926ABE /* ProfileViewController.swift in Sources */,
+				82A530C1277BC8F400926ABE /* LoginViewController.swift in Sources */,
 				82576DCE277470BC003A40B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

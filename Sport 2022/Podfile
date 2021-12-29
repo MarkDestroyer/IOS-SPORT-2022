@@ -7,6 +7,9 @@ target 'Sport 2022' do
 
   pod 'RealmSwift'
   
+  pod 'Firebase/Auth'
+  
+  pod 'Firebase/Database'
   # Pods for Sport 2022
 
 end

@@ -7,7 +7,7 @@
 
 import UIKit
 import RealmSwift
-
+import AVFoundation
 
 class ToDoListItem2: Object {
     @objc dynamic var item: String = ""
@@ -24,6 +24,8 @@ class TuesdayViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     var items2 : Results<ToDoListItem2>?
 
+    var player: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.items2 = realm2.objects(ToDoListItem2.self)
@@ -32,8 +34,42 @@ class TuesdayViewController: UIViewController, UITableViewDelegate, UITableViewD
         table2.dataSource = self
     }
 
-    // Mark: Table
 
+    func playAudio() {
+        let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func playAudio2() {
+        let url = Bundle.main.url(forResource: "delete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+        playAudio()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items2!.count
     }
@@ -43,6 +79,7 @@ class TuesdayViewController: UIViewController, UITableViewDelegate, UITableViewD
             if let item = items2?[indexPath.row] {
                 try! realm2.write {
                     realm2.delete(item)
+                    playAudio2()
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }

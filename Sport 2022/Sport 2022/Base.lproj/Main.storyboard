@@ -16,84 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите Имя и Фамилию" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FG-o7-FG9">
-                                <rect key="frame" x="107" y="183" width="200" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suh-jN-gfI">
-                                <rect key="frame" x="107" y="402" width="200" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-gV-uyj">
-                                <rect key="frame" x="107" y="622" width="200" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uId-vZ-Zr2">
-                                <rect key="frame" x="107" y="332" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqv-7i-fgn">
-                                <rect key="frame" x="107" y="562" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlk-6a-jjQ">
-                                <rect key="frame" x="158.5" y="763" width="97" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Сохранить"/>
-                                <connections>
-                                    <action selector="SaveUserInfo:" destination="Rgy-60-XUc" eventType="touchUpInside" id="rkw-QF-azM"/>
-                                    <segue destination="zq2-V1-VpS" kind="show" id="dOj-dZ-hkt"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJk-6j-9iK">
                                 <rect key="frame" x="271" y="94" width="123" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Пропустить"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Начать"/>
                                 <connections>
                                     <segue destination="zq2-V1-VpS" kind="show" id="KqL-HC-HIV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро Пожаловать !" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqv-7i-fgn">
+                                <rect key="frame" x="135" y="411" width="169" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lh4-Im-dMg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QJk-6j-9iK" firstAttribute="top" secondItem="Lh4-Im-dMg" secondAttribute="top" constant="50" id="0tU-bK-M4p"/>
-                            <constraint firstItem="suh-jN-gfI" firstAttribute="trailing" secondItem="mcV-gV-uyj" secondAttribute="trailing" id="1Yv-W3-7L2"/>
-                            <constraint firstItem="Lh4-Im-dMg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uId-vZ-Zr2" secondAttribute="trailing" symbolic="YES" id="3RD-fO-FOv"/>
-                            <constraint firstItem="0FG-o7-FG9" firstAttribute="top" secondItem="Lh4-Im-dMg" secondAttribute="top" constant="139" id="53o-6i-Uz4"/>
-                            <constraint firstItem="suh-jN-gfI" firstAttribute="top" secondItem="uId-vZ-Zr2" secondAttribute="bottom" constant="49" id="Azo-O6-x9p"/>
-                            <constraint firstItem="Nlk-6a-jjQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lh4-Im-dMg" secondAttribute="leading" id="Llt-lx-YPE"/>
                             <constraint firstItem="Lh4-Im-dMg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qqv-7i-fgn" secondAttribute="trailing" symbolic="YES" id="PkU-La-vpi"/>
-                            <constraint firstItem="uId-vZ-Zr2" firstAttribute="top" secondItem="N7C-QS-4q0" secondAttribute="top" constant="332" id="SXw-ib-GfL"/>
-                            <constraint firstItem="0FG-o7-FG9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mcV-gV-uyj" secondAttribute="leading" id="TDK-ZD-ki8"/>
-                            <constraint firstItem="suh-jN-gfI" firstAttribute="centerX" secondItem="Nlk-6a-jjQ" secondAttribute="centerX" id="TuR-er-7Ah"/>
+                            <constraint firstItem="Qqv-7i-fgn" firstAttribute="top" secondItem="Lh4-Im-dMg" secondAttribute="top" constant="367" id="SNV-Jz-xfb"/>
+                            <constraint firstItem="Qqv-7i-fgn" firstAttribute="centerX" secondItem="N7C-QS-4q0" secondAttribute="centerX" constant="12.5" id="To8-rF-e9a"/>
                             <constraint firstItem="QJk-6j-9iK" firstAttribute="leading" secondItem="Lh4-Im-dMg" secondAttribute="leading" constant="271" id="VHZ-2T-3hN"/>
-                            <constraint firstItem="0FG-o7-FG9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mcV-gV-uyj" secondAttribute="trailing" id="Vhl-aa-o0G"/>
-                            <constraint firstItem="Lh4-Im-dMg" firstAttribute="trailing" secondItem="Nlk-6a-jjQ" secondAttribute="trailing" constant="158.5" id="Y6V-SY-m7l"/>
-                            <constraint firstAttribute="bottom" secondItem="mcV-gV-uyj" secondAttribute="bottom" constant="240" id="hHD-Xe-JS4"/>
-                            <constraint firstItem="0FG-o7-FG9" firstAttribute="centerX" secondItem="N7C-QS-4q0" secondAttribute="centerX" id="jeD-Ia-xq4"/>
-                            <constraint firstItem="0FG-o7-FG9" firstAttribute="leading" secondItem="Qqv-7i-fgn" secondAttribute="leading" id="k7K-9m-k7D"/>
-                            <constraint firstItem="suh-jN-gfI" firstAttribute="trailing" secondItem="0FG-o7-FG9" secondAttribute="trailing" id="mGb-L4-3r5"/>
-                            <constraint firstItem="mcV-gV-uyj" firstAttribute="top" secondItem="Qqv-7i-fgn" secondAttribute="bottom" constant="39" id="oSp-Gi-Pue"/>
-                            <constraint firstItem="Lh4-Im-dMg" firstAttribute="bottom" secondItem="Nlk-6a-jjQ" secondAttribute="bottom" constant="68" id="p1m-Ee-9O7"/>
-                            <constraint firstItem="suh-jN-gfI" firstAttribute="leading" secondItem="uId-vZ-Zr2" secondAttribute="leading" id="pB4-AS-Xrd"/>
-                            <constraint firstItem="0FG-o7-FG9" firstAttribute="leading" secondItem="uId-vZ-Zr2" secondAttribute="leading" id="qLO-l5-0VG"/>
+                            <constraint firstItem="Qqv-7i-fgn" firstAttribute="leading" secondItem="Lh4-Im-dMg" secondAttribute="leading" constant="135" id="YRm-2m-GOm"/>
+                            <constraint firstItem="Qqv-7i-fgn" firstAttribute="centerY" secondItem="N7C-QS-4q0" secondAttribute="centerY" constant="-27" id="iJX-aJ-z8f"/>
                             <constraint firstItem="QJk-6j-9iK" firstAttribute="trailing" secondItem="N7C-QS-4q0" secondAttribute="trailingMargin" id="w2J-TG-f29"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XzN-qQ-79Z"/>
-                    <connections>
-                        <outlet property="name" destination="suh-jN-gfI" id="4Na-LK-vCi"/>
-                        <outlet property="surname" destination="mcV-gV-uyj" id="Mz7-m5-6eT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVv-bU-ev7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +66,6 @@
                         <segue destination="mpZ-k8-iTr" kind="relationship" relationship="viewControllers" id="Uvr-mj-7mk"/>
                         <segue destination="4Ce-aA-g6V" kind="relationship" relationship="viewControllers" id="Eiz-02-whi"/>
                         <segue destination="fRY-jK-Vqp" kind="relationship" relationship="viewControllers" id="AoJ-jI-UP1"/>
-                        <segue destination="44L-Uf-ukK" kind="relationship" relationship="viewControllers" id="Eyf-oj-j2f"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzn-ZL-pfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -128,7 +78,7 @@
                 <navigationController id="44L-Uf-ukK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Профиль" image="person.circle" catalog="system" selectedImage="person.circle.fill" id="Y3t-Hj-czn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KKS-sp-Vnd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -144,11 +94,11 @@
             <objects>
                 <viewController id="pY7-6B-Zej" customClass="ProfileViewController" customModule="Sport_2022" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g6r-YU-AqS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-MD-tBe">
-                                <rect key="frame" x="168" y="751" width="78" height="40"/>
+                                <rect key="frame" x="168" y="783" width="78" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="выйти"/>
                                 <connections>
@@ -156,13 +106,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCQ-ss-glG">
-                                <rect key="frame" x="186" y="268" width="42" height="30"/>
+                                <rect key="frame" x="186" y="300" width="42" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-bP-0LN">
-                                <rect key="frame" x="186" y="403" width="42" height="21"/>
+                                <rect key="frame" x="186" y="457" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -295,7 +245,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-bN-mAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="983"/>
+            <point key="canvasLocation" x="2710" y="982"/>
         </scene>
         <!--Четверг-->
         <scene sceneID="aiD-7D-j0Q">
@@ -312,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obO-Cr-hqX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="1849"/>
+            <point key="canvasLocation" x="2710" y="1849"/>
         </scene>
         <!--Пятница-->
         <scene sceneID="kMM-0C-mRy">
@@ -329,7 +279,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFc-0a-6sr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="2700"/>
+            <point key="canvasLocation" x="2709" y="2700"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="yR4-62-Oty">
@@ -339,15 +289,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOs-Ni-59Y">
-                                <rect key="frame" x="159" y="801" width="86" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="save:" destination="UIe-Di-FLd" eventType="touchUpInside" id="suc-8S-R4Y"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнение 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-rR-t9b">
                                 <rect key="frame" x="74" y="140" width="287" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -419,6 +360,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOs-Ni-59Y">
+                                <rect key="frame" x="328" y="44" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="UIe-Di-FLd" eventType="touchUpInside" id="suc-8S-R4Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aui-ZT-jXJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -463,15 +413,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPE-3y-eYX">
-                                <rect key="frame" x="159" y="801" width="86" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="didTapSaveButton3:" destination="rqq-LQ-rzI" eventType="touchUpInside" id="o9s-qY-yGS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнение 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTn-5Y-YKS">
                                 <rect key="frame" x="74" y="140" width="287" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -543,6 +484,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPE-3y-eYX">
+                                <rect key="frame" x="328" y="44" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="didTapSaveButton3:" destination="rqq-LQ-rzI" eventType="touchUpInside" id="o9s-qY-yGS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xHN-8V-jTk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -577,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1N-hM-iqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="982"/>
+            <point key="canvasLocation" x="4713" y="982"/>
         </scene>
         <!--Вторник-->
         <scene sceneID="lRc-nP-Eeh">
@@ -624,15 +574,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43j-af-pAl">
-                                <rect key="frame" x="159" y="801" width="86" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="save2:" destination="7BI-lj-uGw" eventType="touchUpInside" id="5ef-q1-pzb"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнение 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyw-wK-TZ9">
                                 <rect key="frame" x="74" y="140" width="287" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -704,6 +645,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43j-af-pAl">
+                                <rect key="frame" x="328" y="44" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="save2:" destination="7BI-lj-uGw" eventType="touchUpInside" id="5ef-q1-pzb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c07-7H-E41"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -775,37 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nt7-6j-H8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="982"/>
-        </scene>
-        <!--Среда-->
-        <scene sceneID="UlF-cB-iRq">
-            <objects>
-                <viewController id="Kzc-tY-ldU" customClass="WednesdayViewController" customModule="Sport_2022" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="owK-Lb-kz9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-Rr-bfM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ya-Nd-uIj">
-                                <rect key="frame" x="10" y="10" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="f4L-uI-JCM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Среда" id="dzx-Vt-xfa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6rg-kS-tei"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G1T-xj-VfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2786" y="1849"/>
+            <point key="canvasLocation" x="3696" y="982"/>
         </scene>
         <!--Четверг-->
         <scene sceneID="V8H-jo-q7E">
@@ -842,37 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mP2-NK-08o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="1849"/>
-        </scene>
-        <!--Среда-->
-        <scene sceneID="rxA-Gl-FLc">
-            <objects>
-                <viewController id="E73-oH-ruk" customClass="WednesdayViewController" customModule="Sport_2022" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fE4-aO-pEO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8AG-Kg-A6Q">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="psv-w0-Fso">
-                                <rect key="frame" x="10" y="10" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="pU8-mi-C29"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Среда" id="awN-fd-bxg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0TT-yC-3X6"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YPe-mz-AP3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2786" y="2700"/>
+            <point key="canvasLocation" x="3696" y="1849"/>
         </scene>
         <!--Пятница-->
         <scene sceneID="391-AI-nnR">
@@ -909,7 +799,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIk-3x-Fn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="2700"/>
+            <point key="canvasLocation" x="3696" y="2684"/>
         </scene>
         <!--Entry View Controller4-->
         <scene sceneID="LSA-Ps-EYz">
@@ -919,15 +809,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qin-aQ-I5D">
-                                <rect key="frame" x="159" y="801" width="86" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="didTapSaveButton4:" destination="idS-x7-3iR" eventType="touchUpInside" id="3Cv-XB-RtB"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнение 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaL-tP-Pqa">
                                 <rect key="frame" x="74" y="140" width="287" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -999,6 +880,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qin-aQ-I5D">
+                                <rect key="frame" x="328" y="44" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="didTapSaveButton4:" destination="idS-x7-3iR" eventType="touchUpInside" id="3Cv-XB-RtB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Xk-Rv-zwf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1033,7 +923,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPy-nA-Phe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="1849"/>
+            <point key="canvasLocation" x="4712" y="1822"/>
         </scene>
         <!--Entry View Controller5-->
         <scene sceneID="i2m-BA-IVw">
@@ -1043,15 +933,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hY-rb-GCa">
-                                <rect key="frame" x="159" y="801" width="86" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="didTapSaveButton5:" destination="3Lu-kb-AsJ" eventType="touchUpInside" id="LRD-TM-VL9"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упражнение 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJ7-97-3Jk">
                                 <rect key="frame" x="74" y="140" width="287" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1123,6 +1004,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hY-rb-GCa">
+                                <rect key="frame" x="328" y="44" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="didTapSaveButton5:" destination="3Lu-kb-AsJ" eventType="touchUpInside" id="LRD-TM-VL9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FzE-KQ-lQO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1157,7 +1047,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCg-4N-NbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="2700"/>
+            <point key="canvasLocation" x="4712" y="2700"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="IQj-9n-0Wq">
@@ -1210,9 +1100,6 @@
             <point key="canvasLocation" x="-867" y="102"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="KqL-HC-HIV"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar.circle" catalog="system" width="128" height="121"/>
         <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>

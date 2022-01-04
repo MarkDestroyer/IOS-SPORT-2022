@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class EntryViewController2: UIViewController, UITextFieldDelegate {
 
@@ -16,10 +17,11 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
     @IBOutlet var TextFieldTuesday4: UITextField!
     @IBOutlet var TextFieldTuesday5: UITextField!
     @IBOutlet var TextFieldTuesday6: UITextField!
-    
+    var player: AVAudioPlayer!
     
     @IBAction func save2(_ sender: Any) {
         didTapSaveButton2()
+        playAudio3()
     }
     
     
@@ -33,6 +35,21 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         TextFieldTuesday.becomeFirstResponder()
         TextFieldTuesday.delegate = self
         
+    }
+    
+    public func playAudio3() {
+        let url = Bundle.main.url(forResource: "save", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -68,7 +85,7 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday3.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem()
+            let newItem = ToDoListItem2()
             newItem.item = text
             realm2.add(newItem)
             try! realm2.commitWrite()

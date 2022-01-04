@@ -7,7 +7,7 @@
 
 import UIKit
 import RealmSwift
-
+import AVFoundation
 
 class ToDoListItem4: Object {
     @objc dynamic var item: String = ""
@@ -19,9 +19,10 @@ class ThursdayViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var table4: UITableView!
     
-    
     private let realm4 = try! Realm()
 
+    var player: AVAudioPlayer!
+    
     var items4 : Results<ToDoListItem4>?
 
     override func viewDidLoad() {
@@ -32,8 +33,41 @@ class ThursdayViewController: UIViewController, UITableViewDelegate, UITableView
         table4.dataSource = self
     }
 
-    // Mark: Table
+    func playAudio() {
+        let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func playAudio2() {
+        let url = Bundle.main.url(forResource: "delete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+        playAudio()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items4!.count
     }
@@ -43,6 +77,7 @@ class ThursdayViewController: UIViewController, UITableViewDelegate, UITableView
             if let item = items4?[indexPath.row] {
                 try! realm4.write {
                     realm4.delete(item)
+                    playAudio2()
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }

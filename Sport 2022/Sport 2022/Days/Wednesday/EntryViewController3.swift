@@ -7,21 +7,22 @@
 
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class EntryViewController3: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var TextFieldWednesday: UITextField!
     @IBOutlet var TextFieldWednesday2: UITextField!
-    
     @IBOutlet var TextFieldWednesday3: UITextField!
     @IBOutlet var TextFieldWednesday4: UITextField!
     @IBOutlet var TextFieldWednesday5: UITextField!
     @IBOutlet var TextFieldWednesday6: UITextField!
-    
+    var player: AVAudioPlayer!
     
     
     @IBAction func didTapSaveButton3(_ sender: Any) {
-            didTapSaveButton3()
+        didTapSaveButton3()
+        playAudio3()
     }
     
     
@@ -35,6 +36,21 @@ class EntryViewController3: UIViewController, UITextFieldDelegate {
         TextFieldWednesday.becomeFirstResponder()
         TextFieldWednesday.delegate = self
         
+    }
+    
+    public func playAudio3() {
+        let url = Bundle.main.url(forResource: "save", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -121,9 +137,9 @@ class EntryViewController3: UIViewController, UITextFieldDelegate {
         }
     }
 
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }
 

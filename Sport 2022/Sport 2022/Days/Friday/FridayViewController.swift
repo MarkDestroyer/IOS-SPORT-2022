@@ -7,7 +7,7 @@
 
 import UIKit
 import RealmSwift
-
+import AVFoundation
 
 class ToDoListItem5: Object {
     @objc dynamic var item: String = ""
@@ -22,6 +22,8 @@ class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     private let realm5 = try! Realm()
 
+    var player: AVAudioPlayer!
+    
     var items5 : Results<ToDoListItem5>?
 
     override func viewDidLoad() {
@@ -30,6 +32,41 @@ class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table5.register(UITableViewCell.self, forCellReuseIdentifier: "cell5")
         table5.delegate = self
         table5.dataSource = self
+    }
+    
+    func playAudio() {
+        let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func playAudio2() {
+        let url = Bundle.main.url(forResource: "delete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+        playAudio()
     }
 
     // Mark: Table
@@ -43,6 +80,7 @@ class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let item = items5?[indexPath.row] {
                 try! realm5.write {
                     realm5.delete(item)
+                    playAudio2()
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }

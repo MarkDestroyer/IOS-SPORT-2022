@@ -7,6 +7,7 @@
 
 import RealmSwift
 import UIKit
+import AVFoundation
 
 class EntryViewController: UIViewController, UITextFieldDelegate {
 
@@ -17,13 +18,12 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var TextFieldMonday4: UITextField!
     @IBOutlet var TextFieldMonday5: UITextField!
     @IBOutlet var TextFieldMonday6: UITextField!
-    
+    var player: AVAudioPlayer!
     
     @IBAction func save(_ sender: Any) {
         didTapSaveButton()
+        playAudio3()
     }
-    
-    
     
     
     private let realm = try! Realm()
@@ -31,11 +31,24 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         TextFieldMonday.becomeFirstResponder()
         TextFieldMonday.delegate = self
         
+    }
+    
+    public func playAudio3() {
+        let url = Bundle.main.url(forResource: "save", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -132,14 +145,5 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
 }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 

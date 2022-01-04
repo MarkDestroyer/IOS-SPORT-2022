@@ -8,15 +8,8 @@
 
 import RealmSwift
 import UIKit
+import AVFoundation
 
-/*
- - To show list of current to do list itmes
- - To enter new to do list items
- - To show previously entered to do list item
-
- - Item
- - Date
- */
 
 class ToDoListItem: Object {
     @objc dynamic var item: String = ""
@@ -31,6 +24,7 @@ class MondayViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var items : Results<ToDoListItem>?
 
+    var player: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +35,41 @@ class MondayViewController: UIViewController, UITableViewDelegate, UITableViewDa
         table.dataSource = self
     }
 
-    // Mark: Table
+    func playAudio() {
+        let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func playAudio2() {
+        let url = Bundle.main.url(forResource: "delete", withExtension: "mp3")
+        
+        guard url != nil else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        } catch {
+            print("\(error)")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+        playAudio()
+    }
+
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items!.count
@@ -52,6 +80,7 @@ class MondayViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let item = items?[indexPath.row] {
                 try! realm.write {
                     realm.delete(item)
+                    playAudio2()
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             }

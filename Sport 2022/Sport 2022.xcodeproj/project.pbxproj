@@ -20,6 +20,7 @@
 		82576DD3277470BC003A40B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD1277470BC003A40B1 /* Main.storyboard */; };
 		82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD4277470BE003A40B1 /* Assets.xcassets */; };
 		82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */; };
+		826183F12785153600F554F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826183F02785153600F554F9 /* TimerViewController.swift */; };
 		8282AA2C27769702009471C5 /* MondayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2B27769702009471C5 /* MondayViewController.swift */; };
 		8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2D2776988C009471C5 /* EntryViewController.swift */; };
 		82A530BE277BC4D800926ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A530BD277BC4D800926ABE /* GoogleService-Info.plist */; };
@@ -49,6 +50,7 @@
 		82576DD4277470BE003A40B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82576DD7277470BE003A40B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82576DD9277470BE003A40B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		826183F02785153600F554F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		8282AA2B27769702009471C5 /* MondayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayViewController.swift; sourceTree = "<group>"; };
 		8282AA2D2776988C009471C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		82A530BD277BC4D800926ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
+				826183F02785153600F554F9 /* TimerViewController.swift */,
 				82F09A692783E21A005AC6BF /* save.mp3 */,
 				82F09A672783DFBC005AC6BF /* delete.mp3 */,
 				82F09A652783DF41005AC6BF /* complete.mp3 */,
@@ -321,6 +324,7 @@
 				821C31102777304B00501189 /* FridayViewController.swift in Sources */,
 				821C31122777305600501189 /* EntryViewController5.swift in Sources */,
 				8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */,
+				826183F12785153600F554F9 /* TimerViewController.swift in Sources */,
 				821C31052777224300501189 /* WednesdayViewController.swift in Sources */,
 				82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */,
 				82A530C1277BC8F400926ABE /* LoginViewController.swift in Sources */,

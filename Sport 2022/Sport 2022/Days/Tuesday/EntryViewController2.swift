@@ -61,8 +61,8 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem2()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm2.add(newItem)
             try! realm2.commitWrite()
 
@@ -73,8 +73,8 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday2.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem2()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm2.add(newItem)
             try! realm2.commitWrite()
 
@@ -85,8 +85,8 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday3.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem2()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm2.add(newItem)
             try! realm2.commitWrite()
 
@@ -97,8 +97,8 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday4.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem2()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm2.add(newItem)
             try! realm2.commitWrite()
 
@@ -109,8 +109,8 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday5.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem2()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm2.add(newItem)
             try! realm2.commitWrite()
 
@@ -122,8 +122,8 @@ class EntryViewController2: UIViewController, UITextFieldDelegate {
         if let text = TextFieldTuesday6.text, !text.isEmpty {
 
             realm2.beginWrite()
-            let newItem = ToDoListItem2()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm2.add(newItem)
             try! realm2.commitWrite()
 

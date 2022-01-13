@@ -9,10 +9,7 @@ import UIKit
 import RealmSwift
 import AVFoundation
 
-class ToDoListItem4: Object {
-    @objc dynamic var item: String = ""
-    @objc dynamic var date: Date = Date()
-}
+
 
 class ThursdayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -23,14 +20,15 @@ class ThursdayViewController: UIViewController, UITableViewDelegate, UITableView
 
     var player: AVAudioPlayer!
     
-    var items4 : Results<ToDoListItem4>?
+    var items4 : Results<ExercisesDB>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.items4 = realm4.objects(ToDoListItem4.self)
+        self.items4 = realm4.objects(ExercisesDB.self)
         table4.register(UITableViewCell.self, forCellReuseIdentifier: "cell4")
         table4.delegate = self
         table4.dataSource = self
+        refresh4()
     }
 
     func playAudio() {
@@ -86,7 +84,7 @@ class ThursdayViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath)
-        cell.textLabel?.text = items4![indexPath.row].item
+        cell.textLabel?.text = items4![indexPath.row].name
         return cell
     }
     
@@ -102,7 +100,7 @@ class ThursdayViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func refresh4() {
-        items4 = realm4.objects(ToDoListItem4.self)
+        items4 = realm4.objects(ExercisesDB.self)
         table4.reloadData()
     }
 

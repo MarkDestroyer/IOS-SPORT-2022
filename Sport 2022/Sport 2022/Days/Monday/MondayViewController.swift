@@ -11,28 +11,24 @@ import UIKit
 import AVFoundation
 
 
-class ToDoListItem: Object {
-    @objc dynamic var item: String = ""
-    @objc dynamic var date: Date = Date()
-}
-
 class MondayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var table: UITableView!
 
     private let realm = try! Realm()
 
-    var items : Results<ToDoListItem>?
+    var items : Results<ExercisesDB>?
 
     var player: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
-        self.items = realm.objects(ToDoListItem.self)
+        self.items = realm.objects(ExercisesDB.self)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
+        refresh()
     }
 
     func playAudio() {
@@ -89,7 +85,7 @@ class MondayViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = items![indexPath.row].item
+        cell.textLabel?.text = items![indexPath.row].name
         return cell
     }
 
@@ -106,7 +102,7 @@ class MondayViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func refresh() {
-        self.items = realm.objects(ToDoListItem.self)
+        self.items = realm.objects(ExercisesDB.self)
         table.reloadData()
     }
 

@@ -9,10 +9,7 @@ import UIKit
 import RealmSwift
 import AVFoundation
 
-class ToDoListItem5: Object {
-    @objc dynamic var item: String = ""
-    @objc dynamic var date: Date = Date()
-}
+
 
 class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -24,14 +21,15 @@ class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var player: AVAudioPlayer!
     
-    var items5 : Results<ToDoListItem5>?
+    var items5 : Results<ExercisesDB>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.items5 = realm5.objects(ToDoListItem5.self)
+        self.items5 = realm5.objects(ExercisesDB.self)
         table5.register(UITableViewCell.self, forCellReuseIdentifier: "cell5")
         table5.delegate = self
         table5.dataSource = self
+        refresh5()
     }
     
     func playAudio() {
@@ -89,7 +87,7 @@ class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell5", for: indexPath)
-        cell.textLabel?.text = items5![indexPath.row].item
+        cell.textLabel?.text = items5![indexPath.row].name
         return cell
     }
     
@@ -105,7 +103,7 @@ class FridayViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func refresh5() {
-        items5 = realm5.objects(ToDoListItem5.self)
+        items5 = realm5.objects(ExercisesDB.self)
         table5.reloadData()
     }
 

@@ -63,8 +63,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         if let text = TextFieldFriday.text, !text.isEmpty {
 
             realm5.beginWrite()
-            let newItem = ToDoListItem5()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm5.add(newItem)
             try! realm5.commitWrite()
 
@@ -75,8 +75,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         if let text = TextFieldFriday2.text, !text.isEmpty {
 
             realm5.beginWrite()
-            let newItem = ToDoListItem5()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm5.add(newItem)
             try! realm5.commitWrite()
 
@@ -87,8 +87,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         if let text = TextFieldFriday3.text, !text.isEmpty {
 
             realm5.beginWrite()
-            let newItem = ToDoListItem5()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm5.add(newItem)
             try! realm5.commitWrite()
 
@@ -99,8 +99,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         if let text = TextFieldFriday4.text, !text.isEmpty {
 
             realm5.beginWrite()
-            let newItem = ToDoListItem5()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm5.add(newItem)
             try! realm5.commitWrite()
 
@@ -111,8 +111,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         if let text = TextFieldFriday5.text, !text.isEmpty {
 
             realm5.beginWrite()
-            let newItem = ToDoListItem5()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm5.add(newItem)
             try! realm5.commitWrite()
 
@@ -124,8 +124,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         if let text = TextFieldFriday6.text, !text.isEmpty {
 
             realm5.beginWrite()
-            let newItem = ToDoListItem5()
-            newItem.item = text
+            let newItem = ExercisesDB()
+            newItem.name = text
             realm5.add(newItem)
             try! realm5.commitWrite()
 

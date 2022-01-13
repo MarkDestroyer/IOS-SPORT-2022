@@ -61,34 +61,109 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PYI-jG-hqO" kind="relationship" relationship="viewControllers" id="Uc4-0a-Spa"/>
-                        <segue destination="jzm-Py-Qqs" kind="relationship" relationship="viewControllers" id="Vdr-LO-OxT"/>
-                        <segue destination="mpZ-k8-iTr" kind="relationship" relationship="viewControllers" id="Uvr-mj-7mk"/>
-                        <segue destination="4Ce-aA-g6V" kind="relationship" relationship="viewControllers" id="Eiz-02-whi"/>
-                        <segue destination="fRY-jK-Vqp" kind="relationship" relationship="viewControllers" id="AoJ-jI-UP1"/>
-                        <segue destination="T7A-qg-aPk" kind="relationship" relationship="viewControllers" id="P8x-aL-FHW"/>
+                        <segue destination="unc-Zd-rpr" kind="relationship" relationship="viewControllers" id="6Bh-gy-9bN"/>
+                        <segue destination="aOZ-tr-CY6" kind="relationship" relationship="viewControllers" id="Uls-4L-Mub"/>
+                        <segue destination="fOl-Cr-Dl3" kind="relationship" relationship="viewControllers" id="kBY-xz-ILZ"/>
+                        <segue destination="8JD-qy-6q0" kind="relationship" relationship="viewControllers" id="Ru7-fw-ypH"/>
+                        <segue destination="tw1-RR-bjC" kind="relationship" relationship="viewControllers" id="9Dl-tO-F2a"/>
+                        <segue destination="5ia-BF-uHQ" kind="relationship" relationship="viewControllers" id="YAM-Wa-loo"/>
+                        <segue destination="T7A-qg-aPk" kind="relationship" relationship="viewControllers" id="xaZ-5h-wIv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzn-ZL-pfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="101.78571428571428"/>
         </scene>
-        <!--Понедельник-->
-        <scene sceneID="V9K-yj-1zo">
+        <!--Profile View Controller-->
+        <scene sceneID="CnV-76-kJf">
             <objects>
-                <navigationController id="PYI-jG-hqO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Понедельник" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="GyA-Zo-5eF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="H1z-ZH-3dz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <viewController id="Giw-lU-P6X" customClass="ProfileViewController" customModule="Sport_2022" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nwf-Ad-5YU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4wx-px-Hnb">
+                                <rect key="frame" x="20" y="138" width="105" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="aeN-Qe-cqc"/>
+                                    <constraint firstAttribute="width" constant="105" id="mfx-Vq-aIv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KI3-OM-f7x">
+                                <rect key="frame" x="198" y="138" width="42" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh6-wT-fdt">
+                                <rect key="frame" x="244" y="219" width="42" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZJ-A5-oUh">
+                                <rect key="frame" x="60" y="491" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdZ-w5-dXN">
+                                <rect key="frame" x="60" y="601" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjr-Nr-jHx">
+                                <rect key="frame" x="60" y="792" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W2t-wS-kiq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vjr-Nr-jHx" secondAttribute="trailing" constant="70" id="4a1-1R-Jsc"/>
+                            <constraint firstItem="W2t-wS-kiq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XdZ-w5-dXN" secondAttribute="trailing" symbolic="YES" id="7bf-KY-6G8"/>
+                            <constraint firstItem="XdZ-w5-dXN" firstAttribute="top" secondItem="CZJ-A5-oUh" secondAttribute="bottom" constant="89" id="99h-t8-Saq"/>
+                            <constraint firstItem="XdZ-w5-dXN" firstAttribute="leading" secondItem="CZJ-A5-oUh" secondAttribute="leading" id="Ade-Hb-Mmr"/>
+                            <constraint firstItem="Vjr-Nr-jHx" firstAttribute="trailing" secondItem="CZJ-A5-oUh" secondAttribute="trailing" id="Gef-Fd-vtY"/>
+                            <constraint firstItem="4wx-px-Hnb" firstAttribute="top" secondItem="W2t-wS-kiq" secondAttribute="top" constant="81.5" id="NIg-3x-cAH"/>
+                            <constraint firstItem="W2t-wS-kiq" firstAttribute="bottom" secondItem="vh6-wT-fdt" secondAttribute="bottom" constant="519" id="UW6-r9-9Vf"/>
+                            <constraint firstItem="W2t-wS-kiq" firstAttribute="bottom" secondItem="KI3-OM-f7x" secondAttribute="bottom" constant="600" id="Vx2-ff-Gw7"/>
+                            <constraint firstItem="vh6-wT-fdt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4wx-px-Hnb" secondAttribute="trailing" constant="8" symbolic="YES" id="dY9-rp-JAg"/>
+                            <constraint firstItem="KI3-OM-f7x" firstAttribute="top" secondItem="W2t-wS-kiq" secondAttribute="top" constant="82" id="duf-SL-T2Y"/>
+                            <constraint firstItem="W2t-wS-kiq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CZJ-A5-oUh" secondAttribute="trailing" symbolic="YES" id="eYe-hc-75y"/>
+                            <constraint firstItem="vh6-wT-fdt" firstAttribute="top" secondItem="W2t-wS-kiq" secondAttribute="top" constant="163" id="gkq-E3-rsi"/>
+                            <constraint firstItem="Vjr-Nr-jHx" firstAttribute="trailing" secondItem="XdZ-w5-dXN" secondAttribute="trailing" id="k3O-gi-XzY"/>
+                            <constraint firstItem="W2t-wS-kiq" firstAttribute="trailing" secondItem="vh6-wT-fdt" secondAttribute="trailing" constant="128" id="khg-MA-CZM"/>
+                            <constraint firstItem="XdZ-w5-dXN" firstAttribute="leading" secondItem="W2t-wS-kiq" secondAttribute="leading" constant="60" id="pre-d0-RUd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Vjr-Nr-jHx" secondAttribute="bottom" id="q3D-2H-LOM"/>
+                            <constraint firstItem="W2t-wS-kiq" firstAttribute="trailing" secondItem="KI3-OM-f7x" secondAttribute="trailing" constant="174" id="r0d-dv-eub"/>
+                            <constraint firstItem="KI3-OM-f7x" firstAttribute="leading" secondItem="4wx-px-Hnb" secondAttribute="trailing" constant="73" id="tmn-DU-rOk"/>
+                            <constraint firstAttribute="bottom" secondItem="XdZ-w5-dXN" secondAttribute="bottom" constant="220" id="wDf-5a-8j4"/>
+                            <constraint firstItem="Vjr-Nr-jHx" firstAttribute="leading" secondItem="XdZ-w5-dXN" secondAttribute="leading" id="xXQ-5c-Aa4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fUI-E5-MQ8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="9F5-d7-Yf0">
+                            <connections>
+                                <segue destination="ypo-qK-GO6" kind="show" id="gDb-Tj-RiT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="sP8-Bb-S6q" kind="relationship" relationship="rootViewController" id="pJV-AK-UfU"/>
+                        <outlet property="BeltDiameterLabel" destination="Vjr-Nr-jHx" id="5BP-UG-Lx3"/>
+                        <outlet property="ChestDiameterLabel" destination="XdZ-w5-dXN" id="Ye4-L7-ppR"/>
+                        <outlet property="EmailLabel" destination="vh6-wT-fdt" id="Pys-Df-Ah0"/>
+                        <outlet property="NameLabel" destination="KI3-OM-f7x" id="nY3-hw-gLM"/>
+                        <outlet property="ProfileImage" destination="4wx-px-Hnb" id="F6z-Ci-0M6"/>
+                        <outlet property="WeightLabel" destination="CZJ-A5-oUh" id="Eyu-Ni-CuG"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="quZ-Rd-e7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbJ-qr-p7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710.144927536232" y="-518.30357142857144"/>
+            <point key="canvasLocation" x="4606" y="-1953"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="isF-Vu-Ts8">
@@ -191,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0I-gE-O1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3695.652173913044" y="-1256.25"/>
+            <point key="canvasLocation" x="4606" y="-1256"/>
         </scene>
         <!--Понедельник-->
         <scene sceneID="7Ms-A1-qna">
@@ -228,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBE-vQ-bdi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3695.652173913044" y="-518.30357142857144"/>
+            <point key="canvasLocation" x="4605.7971014492759" y="-518.30357142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w7c-Uz-fEK">
@@ -245,74 +320,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEi-sR-YF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1807" y="102"/>
-        </scene>
-        <!--Вторник-->
-        <scene sceneID="cqE-jW-ZPO">
-            <objects>
-                <navigationController id="jzm-Py-Qqs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Вторник" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="HBK-3W-Xpb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Yp7-ir-eVI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="SB1-xo-OsU" kind="relationship" relationship="rootViewController" id="qcG-Qc-R5U"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WO8-HW-zlz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2710.144927536232" y="227.67857142857142"/>
-        </scene>
-        <!--Среда-->
-        <scene sceneID="Dmn-gj-TlD">
-            <objects>
-                <navigationController id="mpZ-k8-iTr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Среда" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="DBY-dQ-VJB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XUP-05-kJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BIc-3N-J2F" kind="relationship" relationship="rootViewController" id="rgW-Tn-4aY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-bN-mAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2710" y="982"/>
-        </scene>
-        <!--Четверг-->
-        <scene sceneID="aiD-7D-j0Q">
-            <objects>
-                <navigationController id="4Ce-aA-g6V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Четверг" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="puK-rf-kT4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ocu-yY-C4w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ZVM-He-09b" kind="relationship" relationship="rootViewController" id="6WL-YG-ddW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="obO-Cr-hqX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2710" y="1849"/>
-        </scene>
-        <!--Пятница-->
-        <scene sceneID="kMM-0C-mRy">
-            <objects>
-                <navigationController id="fRY-jK-Vqp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Пятница" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="3ta-A2-LZY"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RX1-ie-DPL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="f2q-G9-YlX" kind="relationship" relationship="rootViewController" id="au3-lh-dTJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jFc-0a-6sr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2709" y="2700"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="yR4-62-Oty">
@@ -436,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnY-se-fKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4713.04347826087" y="-518.30357142857144"/>
+            <point key="canvasLocation" x="5623.188405797102" y="-518.30357142857144"/>
         </scene>
         <!--Entry View Controller3-->
         <scene sceneID="Vzz-Ok-ZzL">
@@ -560,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1N-hM-iqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4713" y="982"/>
+            <point key="canvasLocation" x="5623" y="962"/>
         </scene>
         <!--Вторник-->
         <scene sceneID="lRc-nP-Eeh">
@@ -597,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43I-7z-Nao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3695.652173913044" y="227.67857142857142"/>
+            <point key="canvasLocation" x="4605.7971014492759" y="227.67857142857142"/>
         </scene>
         <!--Entry View Controller2-->
         <scene sceneID="GGp-Hh-7ml">
@@ -721,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gva-v0-RTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4713.04347826087" y="227.67857142857142"/>
+            <point key="canvasLocation" x="5623.188405797102" y="227.67857142857142"/>
         </scene>
         <!--Среда-->
         <scene sceneID="bmK-m8-NZK">
@@ -758,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nt7-6j-H8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3696" y="982"/>
+            <point key="canvasLocation" x="4606" y="962"/>
         </scene>
         <!--Четверг-->
         <scene sceneID="V8H-jo-q7E">
@@ -795,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mP2-NK-08o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3696" y="1849"/>
+            <point key="canvasLocation" x="4606" y="1849"/>
         </scene>
         <!--Пятница-->
         <scene sceneID="391-AI-nnR">
@@ -832,7 +839,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIk-3x-Fn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3696" y="2684"/>
+            <point key="canvasLocation" x="4606" y="2700"/>
         </scene>
         <!--Entry View Controller4-->
         <scene sceneID="LSA-Ps-EYz">
@@ -956,7 +963,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPy-nA-Phe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4712" y="1822"/>
+            <point key="canvasLocation" x="5622" y="1849"/>
         </scene>
         <!--Entry View Controller5-->
         <scene sceneID="i2m-BA-IVw">
@@ -1080,7 +1087,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCg-4N-NbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4712" y="2700"/>
+            <point key="canvasLocation" x="5622" y="2700"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="IQj-9n-0Wq">
@@ -1149,7 +1156,230 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZuH-HH-s5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2709" y="-1256"/>
+            <point key="canvasLocation" x="3696" y="-1256"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="dHN-H2-uXn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ia-BF-uHQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.circle.fill" catalog="system" id="aFG-Se-RRh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Wr-gP-TRU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Giw-lU-P6X" kind="relationship" relationship="rootViewController" id="TF5-0P-YEX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCl-vR-2Gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696" y="-1953"/>
+        </scene>
+        <!--Save User Info View Controller-->
+        <scene sceneID="uYf-YG-ys7">
+            <objects>
+                <viewController id="ypo-qK-GO6" customClass="SaveUserInfoViewController" customModule="Sport_2022" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jQW-1c-SWE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwH-04-4oi">
+                                <rect key="frame" x="74" y="140" width="287" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEP-0P-HzS">
+                                <rect key="frame" x="74" y="257" width="40.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="вес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXu-8T-Y7Z">
+                                <rect key="frame" x="74" y="370" width="27.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="диаметр груди" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hC-yv-V2E">
+                                <rect key="frame" x="74" y="482" width="118.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="диаметр пояса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQK-QP-QsV">
+                                <rect key="frame" x="74" y="586" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-Zf-hLm">
+                                <rect key="frame" x="74" y="190" width="287" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-A4-nRH">
+                                <rect key="frame" x="74" y="301" width="287" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-em-BF2">
+                                <rect key="frame" x="74" y="419" width="287" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-yf-aCY">
+                                <rect key="frame" x="74" y="526" width="287" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAo-sj-e80">
+                                <rect key="frame" x="74" y="629" width="287" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nt7-BC-wDH">
+                                <rect key="frame" x="328" y="44" width="86" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="Save:" destination="ypo-qK-GO6" eventType="touchUpInside" id="KVS-SU-81w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NFp-fw-qWM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="leading" secondItem="LQK-QP-QsV" secondAttribute="leading" id="7yf-vr-1wD"/>
+                            <constraint firstItem="4hC-yv-V2E" firstAttribute="top" secondItem="mXu-8T-Y7Z" secondAttribute="bottom" constant="91" id="D3x-bT-LQ8"/>
+                            <constraint firstItem="LQK-QP-QsV" firstAttribute="top" secondItem="4hC-yv-V2E" secondAttribute="bottom" constant="83" id="G8k-nO-fSi"/>
+                            <constraint firstItem="NFp-fw-qWM" firstAttribute="trailing" secondItem="Vcf-Zf-hLm" secondAttribute="trailing" constant="53" id="GcZ-ho-qC5"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="top" secondItem="jwH-04-4oi" secondAttribute="bottom" constant="29" id="Hru-jx-hia"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="leading" secondItem="cEP-0P-HzS" secondAttribute="leading" id="Ndx-6o-IV2"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="leading" secondItem="jwH-04-4oi" secondAttribute="leading" id="Nnf-7z-1Yc"/>
+                            <constraint firstItem="mXu-8T-Y7Z" firstAttribute="top" secondItem="cEP-0P-HzS" secondAttribute="bottom" constant="92" id="TMf-cY-l8V"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="trailing" secondItem="jwH-04-4oi" secondAttribute="trailing" id="VG7-DR-4wg"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="leading" secondItem="NFp-fw-qWM" secondAttribute="leading" constant="74" id="XrR-x5-13X"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="top" secondItem="jQW-1c-SWE" secondAttribute="top" constant="190" id="Zyi-eK-Sqa"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="leading" secondItem="4hC-yv-V2E" secondAttribute="leading" id="a9c-W8-ubL"/>
+                            <constraint firstItem="cEP-0P-HzS" firstAttribute="top" secondItem="Vcf-Zf-hLm" secondAttribute="bottom" constant="33" id="gnD-qJ-xyo"/>
+                            <constraint firstItem="Vcf-Zf-hLm" firstAttribute="leading" secondItem="mXu-8T-Y7Z" secondAttribute="leading" id="qoq-6a-NJD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DKs-Jf-cct"/>
+                    <connections>
+                        <outlet property="BeltDiameterTextField" destination="vAo-sj-e80" id="Bpt-X4-TqD"/>
+                        <outlet property="ChestDiameterTextField" destination="cwB-yf-aCY" id="NSH-Zr-3Pi"/>
+                        <outlet property="EmailTextField" destination="qt5-A4-nRH" id="R2n-fz-sCV"/>
+                        <outlet property="NameTextField" destination="Vcf-Zf-hLm" id="vqh-dM-KVW"/>
+                        <outlet property="WeightTextField" destination="vKD-em-BF2" id="zQd-lE-tjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VMt-DL-wOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5623" y="-1953"/>
+        </scene>
+        <!--Среда-->
+        <scene sceneID="5rs-Db-yYv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fOl-Cr-Dl3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Среда" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="AE2-cK-yzg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0uh-bR-ciY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BIc-3N-J2F" kind="relationship" relationship="rootViewController" id="8Qu-yu-1YO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NuL-D2-gid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696" y="962"/>
+        </scene>
+        <!--Четверг-->
+        <scene sceneID="ixe-mQ-H72">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8JD-qy-6q0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Четверг" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="WD7-mb-MQP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fu9-jb-LgK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZVM-He-09b" kind="relationship" relationship="rootViewController" id="3s8-fj-RCH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlK-QP-GVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696" y="1849"/>
+        </scene>
+        <!--Пятница-->
+        <scene sceneID="yjV-e0-RWg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tw1-RR-bjC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Пятница" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="2dU-tc-Oo5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vUJ-Ou-RYN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f2q-G9-YlX" kind="relationship" relationship="rootViewController" id="7ba-Av-7u3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bn6-1O-2Ce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696" y="2700"/>
+        </scene>
+        <!--Понедельник-->
+        <scene sceneID="f6C-o1-hJ0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="unc-Zd-rpr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Понедельник" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="8qe-KX-c2w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aDW-mK-sjz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sP8-Bb-S6q" kind="relationship" relationship="rootViewController" id="5sX-mv-8Lh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDo-Es-wVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3695.652173913044" y="-518.30357142857144"/>
+        </scene>
+        <!--Вторник-->
+        <scene sceneID="x4y-56-z7u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOZ-tr-CY6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Вторник" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="Kj8-1c-7ax"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSl-gQ-p3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SB1-xo-OsU" kind="relationship" relationship="rootViewController" id="1ok-DK-Jhp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7E-zu-hY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3695.652173913044" y="227.67857142857142"/>
         </scene>
     </scenes>
     <resources>
@@ -1157,6 +1387,8 @@
         <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

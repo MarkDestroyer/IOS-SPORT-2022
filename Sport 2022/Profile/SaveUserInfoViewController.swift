@@ -8,6 +8,7 @@
 import UIKit
 import RealmSwift
 
+
 class SaveUserInfoViewController: UIViewController {
 
     
@@ -27,8 +28,15 @@ class SaveUserInfoViewController: UIViewController {
     }
     
     
+    
+    
     @IBAction func Save(_ sender: Any) {
         didTapSaveButton()
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     

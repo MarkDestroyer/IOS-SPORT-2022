@@ -16,7 +16,7 @@ class TuesdayViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var table2: UITableView!
     
-
+    
     private let realm2 = try! Realm()
 
     var items2 : Results<ExercisesDB>?

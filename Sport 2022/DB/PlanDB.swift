@@ -16,4 +16,6 @@ class PlanDB: Object {
     @objc dynamic var replay: Int = 0
     @objc dynamic var weight: Double = 0
     @objc dynamic var comment: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var approach: Int = 0
 }

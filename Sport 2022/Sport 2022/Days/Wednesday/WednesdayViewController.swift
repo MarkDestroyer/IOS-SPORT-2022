@@ -9,28 +9,39 @@ import UIKit
 import RealmSwift
 import AVFoundation
 
-
-
-class WednesdayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-
+class WednesdayViewController: UITableViewController {
     
-    @IBOutlet var table3: UITableView!
-    
-    private let realm3 = try! Realm()
-
-    var items3 : Results<ExercisesDB>?
+    let planDB = PlanDB()
     
     var player: AVAudioPlayer!
+    
+    let config = Realm.Configuration(schemaVersion: 4)
+    lazy var realm = try! Realm(configuration: config)
+    
+    var exercises: Results<PlanDB>?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.items3 = realm3.objects(ExercisesDB.self)
-        table3.register(UITableViewCell.self, forCellReuseIdentifier: "cell3")
-        table3.delegate = self
-        table3.dataSource = self
-        refresh3()
+
+    func loadData() {
+        do {
+            let realm = try Realm()
+            
+            let userinfo = realm.objects(PlanDB.self)
+            
+            self.exercises = (userinfo)
+            
+        } catch {
+            // если произошла ошибка, выводим ее в консоль
+            print(error)
+        }
     }
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+    }
+    
+    
     func playAudio() {
         let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
         
@@ -60,21 +71,12 @@ class WednesdayViewController: UIViewController, UITableViewDelegate, UITableVie
             print("\(error)")
         }
     }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
-        playAudio()
-    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items3!.count
-    }
-
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            if let item = items3?[indexPath.row] {
-                try! realm3.write {
-                    realm3.delete(item)
+            if let item = exercises?[indexPath.row] {
+                try! realm.write {
+                    realm.delete(item)
                     playAudio2()
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
@@ -82,27 +84,32 @@ class WednesdayViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    // MARK: - Table view data source
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
-        cell.textLabel?.text = items3![indexPath.row].name
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exercises?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+        playAudio()
+    }
+
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: WednesdayTableViewCell.identifier, for: indexPath) as! WednesdayTableViewCell
+        
+        
+        
+        cell.configure((exercises?[indexPath.row])! )
+        
         return cell
     }
     
-    @IBAction func didTapAddButton3(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "wednesday") as? EntryViewController3 else {
-            return
-        }
-        vc.completionHandler3 = { [weak self] in
-            self?.refresh3()
-        }
-        vc.navigationItem.largeTitleDisplayMode = .never
-        navigationController?.pushViewController(vc, animated: true)
-    }
-
-    func refresh3() {
-        self.items3 = realm3.objects(ExercisesDB.self)
-        table3.reloadData()
-    }
-
 }
+

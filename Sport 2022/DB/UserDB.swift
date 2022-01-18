@@ -18,5 +18,6 @@ class UserDB: Object {
     @objc dynamic var email: String = ""
     @objc dynamic var ChestDiameter: Double = 0
     @objc dynamic var BeltDiameter: Double = 0
+    @objc dynamic var image: String = ""
 }
 

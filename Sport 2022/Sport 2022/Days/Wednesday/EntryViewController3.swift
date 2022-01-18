@@ -15,8 +15,8 @@ class EntryViewController3: UIViewController, UITextFieldDelegate {
     @IBOutlet var TextFieldWednesday2: UITextField!
     @IBOutlet var TextFieldWednesday3: UITextField!
     @IBOutlet var TextFieldWednesday4: UITextField!
-    @IBOutlet var TextFieldWednesday5: UITextField!
-    @IBOutlet var TextFieldWednesday6: UITextField!
+   
+    
     var player: AVAudioPlayer!
     
     
@@ -28,7 +28,7 @@ class EntryViewController3: UIViewController, UITextFieldDelegate {
     
     
     private let realm3 = try! Realm()
-    public var completionHandler3: (() -> Void)?
+    public var completionHandlerWednesday: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,82 +60,27 @@ class EntryViewController3: UIViewController, UITextFieldDelegate {
 
     @objc func didTapSaveButton3() {
         if let text = TextFieldWednesday.text, !text.isEmpty {
+            if let text2 = TextFieldWednesday2.text, !text.isEmpty {
+                if let text3 = TextFieldWednesday3.text, !text.isEmpty {
+                    if let text4 = TextFieldWednesday4.text, !text.isEmpty {
+                            realm3.beginWrite()
+                            let newItem = PlanDB()
+                            newItem.name = text
+                            newItem.approach = Int(text2) ?? 0
+                            newItem.replay =  Int(text3) ?? 0
+                            newItem.weight = Double(text4) ?? 0
+                            realm3.add(newItem)
+                            try! realm3.commitWrite()
 
-            realm3.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm3.add(newItem)
-            try! realm3.commitWrite()
-
-            completionHandler3?()
-            navigationController?.popToRootViewController(animated: true)
+                            completionHandlerWednesday?()
+                            navigationController?.popToRootViewController(animated: true)
+                            print(realm3.configuration.fileURL!)
+                        }
+                    }
+                }
+            }
         }
-        
-        if let text = TextFieldWednesday2.text, !text.isEmpty {
 
-            realm3.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm3.add(newItem)
-            try! realm3.commitWrite()
-
-            completionHandler3?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        if let text = TextFieldWednesday3.text, !text.isEmpty {
-
-            realm3.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm3.add(newItem)
-            try! realm3.commitWrite()
-
-            completionHandler3?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        if let text = TextFieldWednesday4.text, !text.isEmpty {
-
-            realm3.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm3.add(newItem)
-            try! realm3.commitWrite()
-
-            completionHandler3?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        if let text = TextFieldWednesday5.text, !text.isEmpty {
-
-            realm3.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm3.add(newItem)
-            try! realm3.commitWrite()
-
-            completionHandler3?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        
-        if let text = TextFieldWednesday6.text, !text.isEmpty {
-
-            realm3.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm3.add(newItem)
-            try! realm3.commitWrite()
-
-            completionHandler3?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        else {
-            print("Add something")
-        }
-    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

@@ -1,27 +1,26 @@
 //
-//  FridayViewController.swift
+//  MondayViewController.swift
 //  Sport 2022
 //
 //  Created by Марк Киричко on 25.12.2021.
 //
 
+
 import UIKit
 import RealmSwift
 import AVFoundation
 
-class FridayViewController: UITableViewController {
+class MondayViewController: UITableViewController {
+    
+    var player: AVAudioPlayer!
     
     let planDB = PlanDB()
     
     let config = Realm.Configuration(schemaVersion: 4)
-    
     lazy var realm = try! Realm(configuration: config)
     
-    var player: AVAudioPlayer!
-    
     var exercises: Results<PlanDB>?
-    
-    
+
 
     func loadData() {
         do {
@@ -41,21 +40,8 @@ class FridayViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        refresh()
     }
-    
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete{
-            if let item = exercises?[indexPath.row] {
-                try! realm.write {
-                    realm.delete(item)
-                    playAudio2()
-                }
-                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-            }
-        }
-    }
-    
     
     func playAudio() {
         let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
@@ -87,6 +73,19 @@ class FridayViewController: UITableViewController {
         }
     }
     
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            if let item = exercises?[indexPath.row] {
+                try! realm.write {
+                    realm.delete(item)
+                    playAudio2()
+                }
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            }
+        }
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -103,9 +102,15 @@ class FridayViewController: UITableViewController {
     }
     
     
+    func refresh() {
+        self.exercises = realm.objects(PlanDB.self)
+        tableView.reloadData()
+    }
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: FridayTableViewCell.identifier, for: indexPath) as! FridayTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MondayTableViewCell.identifier, for: indexPath) as! MondayTableViewCell
         
         
         

@@ -29,7 +29,7 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
     
     
     private let realm5 = try! Realm()
-    public var completionHandler5: (() -> Void)?
+    public var completionHandlerFriday: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,86 +59,31 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
         return true
     }
 
+    
     @objc func didTapSaveButton5() {
         if let text = TextFieldFriday.text, !text.isEmpty {
+            if let text2 = TextFieldFriday2.text, !text.isEmpty {
+                if let text3 = TextFieldFriday3.text, !text.isEmpty {
+                    if let text4 = TextFieldFriday4.text, !text.isEmpty {
+                            realm5.beginWrite()
+                            let newItem = PlanDB()
+                            newItem.name = text
+                            newItem.approach = Int(text2) ?? 0
+                            newItem.replay =  Int(text3) ?? 0
+                            newItem.weight = Double(text4) ?? 0
+                            realm5.add(newItem)
+                            try! realm5.commitWrite()
 
-            realm5.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm5.add(newItem)
-            try! realm5.commitWrite()
-
-            completionHandler5?()
-            navigationController?.popToRootViewController(animated: true)
+                            completionHandlerFriday?()
+                            navigationController?.popToRootViewController(animated: true)
+                            print(realm5.configuration.fileURL!)
+                        }
+                    }
+                }
+            }
         }
-        
-        if let text = TextFieldFriday2.text, !text.isEmpty {
 
-            realm5.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm5.add(newItem)
-            try! realm5.commitWrite()
-
-            completionHandler5?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        if let text = TextFieldFriday3.text, !text.isEmpty {
-
-            realm5.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm5.add(newItem)
-            try! realm5.commitWrite()
-
-            completionHandler5?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        if let text = TextFieldFriday4.text, !text.isEmpty {
-
-            realm5.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm5.add(newItem)
-            try! realm5.commitWrite()
-
-            completionHandler5?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        if let text = TextFieldFriday5.text, !text.isEmpty {
-
-            realm5.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm5.add(newItem)
-            try! realm5.commitWrite()
-
-            completionHandler5?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        
-        if let text = TextFieldFriday6.text, !text.isEmpty {
-
-            realm5.beginWrite()
-            let newItem = ExercisesDB()
-            newItem.name = text
-            realm5.add(newItem)
-            try! realm5.commitWrite()
-
-            completionHandler5?()
-            navigationController?.popToRootViewController(animated: true)
-        }
-        
-        else {
-            print("Add something")
-        }
     
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

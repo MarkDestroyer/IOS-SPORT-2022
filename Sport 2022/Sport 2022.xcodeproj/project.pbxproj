@@ -21,6 +21,9 @@
 		82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD4277470BE003A40B1 /* Assets.xcassets */; };
 		82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */; };
 		826183F12785153600F554F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826183F02785153600F554F9 /* TimerViewController.swift */; };
+		826F69A92796A2BB00E52ED4 /* присед.png in Resources */ = {isa = PBXBuildFile; fileRef = 826F69A82796A2BB00E52ED4 /* присед.png */; };
+		826F69AB2796A2C500E52ED4 /* жим лежа.png in Resources */ = {isa = PBXBuildFile; fileRef = 826F69AA2796A2C500E52ED4 /* жим лежа.png */; };
+		826F69AD2796A2CA00E52ED4 /* гантели.png in Resources */ = {isa = PBXBuildFile; fileRef = 826F69AC2796A2CA00E52ED4 /* гантели.png */; };
 		82710C1F278FF5D600FC2E8E /* UserDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82710C1E278FF5D600FC2E8E /* UserDB.swift */; };
 		82710C21278FF69E00FC2E8E /* BodyParametersDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82710C20278FF69E00FC2E8E /* BodyParametersDB.swift */; };
 		82710C23278FF6FD00FC2E8E /* BodyUserDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82710C22278FF6FD00FC2E8E /* BodyUserDB.swift */; };
@@ -35,6 +38,15 @@
 		82710C382790011A00FC2E8E /* SaveUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82710C372790011A00FC2E8E /* SaveUserInfoViewController.swift */; };
 		8282AA2C27769702009471C5 /* MondayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2B27769702009471C5 /* MondayViewController.swift */; };
 		8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2D2776988C009471C5 /* EntryViewController.swift */; };
+		828778292794291300FE442B /* MondayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828778282794291300FE442B /* MondayTableViewCell.swift */; };
+		8287783C279478FC00FE442B /* WednesdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287783B279478FC00FE442B /* WednesdayTableViewCell.swift */; };
+		8287783E27947CBA00FE442B /* FridayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287783D27947CBA00FE442B /* FridayTableViewCell.swift */; };
+		8287784127948A1D00FE442B /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784027948A1D00FE442B /* Gradient.swift */; };
+		8287784327948C7000FE442B /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784227948C7000FE442B /* GIF.swift */; };
+		8287784A2794992A00FE442B /* отжимания.png in Resources */ = {isa = PBXBuildFile; fileRef = 828778462794992A00FE442B /* отжимания.png */; };
+		8287784B2794992A00FE442B /* растяжка.png in Resources */ = {isa = PBXBuildFile; fileRef = 828778472794992A00FE442B /* растяжка.png */; };
+		8287784C2794992A00FE442B /* пресс.png in Resources */ = {isa = PBXBuildFile; fileRef = 828778482794992A00FE442B /* пресс.png */; };
+		8287784D2794992A00FE442B /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 828778492794992A00FE442B /* sport.gif */; };
 		82A530BE277BC4D800926ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A530BD277BC4D800926ABE /* GoogleService-Info.plist */; };
 		82A530C1277BC8F400926ABE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C0277BC8F400926ABE /* LoginViewController.swift */; };
 		82A530C3277BC97400926ABE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C2277BC97400926ABE /* HomeViewController.swift */; };
@@ -60,6 +72,9 @@
 		82576DD7277470BE003A40B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82576DD9277470BE003A40B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		826183F02785153600F554F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		826F69A82796A2BB00E52ED4 /* присед.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "присед.png"; path = "../../../../../Фитнес/присед.png"; sourceTree = "<group>"; };
+		826F69AA2796A2C500E52ED4 /* жим лежа.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "жим лежа.png"; sourceTree = "<group>"; };
+		826F69AC2796A2CA00E52ED4 /* гантели.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "гантели.png"; path = "../../../../../Фитнес/гантели.png"; sourceTree = "<group>"; };
 		82710C1E278FF5D600FC2E8E /* UserDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDB.swift; sourceTree = "<group>"; };
 		82710C20278FF69E00FC2E8E /* BodyParametersDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersDB.swift; sourceTree = "<group>"; };
 		82710C22278FF6FD00FC2E8E /* BodyUserDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyUserDB.swift; sourceTree = "<group>"; };
@@ -74,6 +89,15 @@
 		82710C372790011A00FC2E8E /* SaveUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserInfoViewController.swift; sourceTree = "<group>"; };
 		8282AA2B27769702009471C5 /* MondayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayViewController.swift; sourceTree = "<group>"; };
 		8282AA2D2776988C009471C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		828778282794291300FE442B /* MondayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayTableViewCell.swift; sourceTree = "<group>"; };
+		8287783B279478FC00FE442B /* WednesdayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayTableViewCell.swift; sourceTree = "<group>"; };
+		8287783D27947CBA00FE442B /* FridayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayTableViewCell.swift; sourceTree = "<group>"; };
+		8287784027948A1D00FE442B /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		8287784227948C7000FE442B /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		828778462794992A00FE442B /* отжимания.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "отжимания.png"; path = "../../../../../Фитнес/отжимания.png"; sourceTree = "<group>"; };
+		828778472794992A00FE442B /* растяжка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "растяжка.png"; path = "../../../../../Фитнес/растяжка.png"; sourceTree = "<group>"; };
+		828778482794992A00FE442B /* пресс.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "пресс.png"; path = "../../../../../Фитнес/пресс.png"; sourceTree = "<group>"; };
+		828778492794992A00FE442B /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = "../../../../../Фитнес/sport.gif"; sourceTree = "<group>"; };
 		82A530BD277BC4D800926ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82A530C0277BC8F400926ABE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82A530C2277BC97400926ABE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +139,7 @@
 			children = (
 				821C31042777224200501189 /* WednesdayViewController.swift */,
 				821C31072777232500501189 /* EntryViewController3.swift */,
+				8287783B279478FC00FE442B /* WednesdayTableViewCell.swift */,
 			);
 			path = Wednesday;
 			sourceTree = "<group>";
@@ -133,6 +158,7 @@
 			children = (
 				821C310F2777304B00501189 /* FridayViewController.swift */,
 				821C31112777305600501189 /* EntryViewController5.swift */,
+				8287783D27947CBA00FE442B /* FridayTableViewCell.swift */,
 			);
 			path = Friday;
 			sourceTree = "<group>";
@@ -140,6 +166,8 @@
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
+				8287783F27948A0800FE442B /* Design */,
+				8287782A279435F800FE442B /* Images */,
 				82710C332790000E00FC2E8E /* Profile */,
 				82710C2C278FF9D300FC2E8E /* Sounds */,
 				82710C1D278FF58F00FC2E8E /* DB */,
@@ -166,6 +194,7 @@
 				82CBF8E32775C8F8009B9926 /* Days */,
 				82576DCB277470BC003A40B1 /* AppDelegate.swift */,
 				82576DCD277470BC003A40B1 /* SceneDelegate.swift */,
+				8282AA2B27769702009471C5 /* MondayViewController.swift */,
 				82576DD1277470BC003A40B1 /* Main.storyboard */,
 				82576DD4277470BE003A40B1 /* Assets.xcassets */,
 				82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */,
@@ -216,6 +245,29 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		8287782A279435F800FE442B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				826F69A82796A2BB00E52ED4 /* присед.png */,
+				828778462794992A00FE442B /* отжимания.png */,
+				828778482794992A00FE442B /* пресс.png */,
+				828778472794992A00FE442B /* растяжка.png */,
+				826F69AC2796A2CA00E52ED4 /* гантели.png */,
+				826F69AA2796A2C500E52ED4 /* жим лежа.png */,
+				828778492794992A00FE442B /* sport.gif */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8287783F27948A0800FE442B /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				8287784027948A1D00FE442B /* Gradient.swift */,
+				8287784227948C7000FE442B /* GIF.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		82A530BF277BC8E500926ABE /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,8 +292,8 @@
 		82CBF8EE277612A9009B9926 /* Monday */ = {
 			isa = PBXGroup;
 			children = (
-				8282AA2B27769702009471C5 /* MondayViewController.swift */,
 				8282AA2D2776988C009471C5 /* EntryViewController.swift */,
+				828778282794291300FE442B /* MondayTableViewCell.swift */,
 			);
 			path = Monday;
 			sourceTree = "<group>";
@@ -314,12 +366,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8287784B2794992A00FE442B /* растяжка.png in Resources */,
 				82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */,
 				82710C2E278FF9FA00FC2E8E /* complete.mp3 in Resources */,
 				82A530BE277BC4D800926ABE /* GoogleService-Info.plist in Resources */,
+				8287784C2794992A00FE442B /* пресс.png in Resources */,
 				82710C32278FFA3400FC2E8E /* delete.mp3 in Resources */,
+				826F69A92796A2BB00E52ED4 /* присед.png in Resources */,
 				82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */,
+				8287784D2794992A00FE442B /* sport.gif in Resources */,
 				82576DD3277470BC003A40B1 /* Main.storyboard in Resources */,
+				826F69AD2796A2CA00E52ED4 /* гантели.png in Resources */,
+				826F69AB2796A2C500E52ED4 /* жим лежа.png in Resources */,
+				8287784A2794992A00FE442B /* отжимания.png in Resources */,
 				82710C30278FFA0F00FC2E8E /* save.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,13 +434,17 @@
 			files = (
 				8282AA2C27769702009471C5 /* MondayViewController.swift in Sources */,
 				821C31082777232500501189 /* EntryViewController3.swift in Sources */,
+				828778292794291300FE442B /* MondayTableViewCell.swift in Sources */,
+				8287784127948A1D00FE442B /* Gradient.swift in Sources */,
 				82710C29278FF8A600FC2E8E /* PlanDB.swift in Sources */,
 				82710C23278FF6FD00FC2E8E /* BodyUserDB.swift in Sources */,
 				82710C21278FF69E00FC2E8E /* BodyParametersDB.swift in Sources */,
 				821C310D27772B8200501189 /* EntryViewController4.swift in Sources */,
 				821C310B27772AFC00501189 /* ThursdayViewController.swift in Sources */,
+				8287784327948C7000FE442B /* GIF.swift in Sources */,
 				821C31002777179600501189 /* TuesdayViewController.swift in Sources */,
 				82A530C3277BC97400926ABE /* HomeViewController.swift in Sources */,
+				8287783E27947CBA00FE442B /* FridayTableViewCell.swift in Sources */,
 				821C31022777195900501189 /* EntryViewController2.swift in Sources */,
 				82710C27278FF82900FC2E8E /* ExercisesDB.swift in Sources */,
 				821C31102777304B00501189 /* FridayViewController.swift in Sources */,
@@ -394,6 +457,7 @@
 				82710C25278FF7B500FC2E8E /* MusclesDB.swift in Sources */,
 				82710C1F278FF5D600FC2E8E /* UserDB.swift in Sources */,
 				82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */,
+				8287783C279478FC00FE442B /* WednesdayTableViewCell.swift in Sources */,
 				82710C2B278FF95100FC2E8E /* UserPlanDB.swift in Sources */,
 				82A530C1277BC8F400926ABE /* LoginViewController.swift in Sources */,
 				82576DCE277470BC003A40B1 /* SceneDelegate.swift in Sources */,

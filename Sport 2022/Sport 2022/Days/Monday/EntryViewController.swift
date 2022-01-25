@@ -5,9 +5,10 @@
 //  Created by Марк Киричко on 25.12.2021.
 //
 
-import RealmSwift
+import Firebase
 import UIKit
 import AVFoundation
+
 
 class EntryViewController: UIViewController, UITextFieldDelegate {
 
@@ -16,8 +17,9 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var TextFieldMonday2: UITextField!
     @IBOutlet var TextFieldMonday3: UITextField!
     @IBOutlet var TextFieldMonday4: UITextField!
-
+    @IBOutlet var TextFieldMonday5: UITextField!
     
+    let ref = Database.database().reference(withPath: "userinfo/Monday exercises") // ссылка на контейнер/папку в Database
     var player: AVAudioPlayer!
     
     public var completionHandler: (() -> Void)?
@@ -29,7 +31,6 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    private let realm = try! Realm()
     var completionHandlerMonday: (() -> Void)?
     
     override func viewDidLoad() {
@@ -37,6 +38,17 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         TextFieldMonday.becomeFirstResponder()
         TextFieldMonday.delegate = self
         
+           ref.observe(.value, with: { snapshot in
+               
+               var exercises: [ExercisesFB] = []
+               
+               for child in snapshot.children {
+                   if let snapshot = child as? DataSnapshot,
+                      let exercise = ExercisesFB(snapshot: snapshot) {
+                          exercises.append(exercise)
+                   }
+               }
+         })
     }
     
     
@@ -66,24 +78,23 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
             if let text2 = TextFieldMonday2.text, !text.isEmpty {
                 if let text3 = TextFieldMonday3.text, !text.isEmpty {
                     if let text4 = TextFieldMonday4.text, !text.isEmpty {
-                            realm.beginWrite()
-                            let newItem = PlanDB()
-                            newItem.name = text
-                            newItem.approach = Int(text2) ?? 0
-                            newItem.replay =  Int(text3) ?? 0
-                            newItem.weight = Double(text4) ?? 0
-                            realm.add(newItem)
-                            try! realm.commitWrite()
-
+                        if let text5 = TextFieldMonday5.text, !text.isEmpty {
+                            //Готовим модель
+                            let exercise = ExercisesFB(name: text, approach: Int(text2) ?? 0, replay: Int(text3) ?? 0, weight: Double(text4) ?? 0, comment: text5)
+                            
+                            
+                            let exersiseRef = self.ref.child(text)
+                            
+                            exersiseRef.setValue(exercise.toAnyObject())
+                            
                             completionHandlerMonday?()
                             navigationController?.popToRootViewController(animated: true)
-                            print(realm.configuration.fileURL!)
                         }
                     }
                 }
             }
         }
-
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

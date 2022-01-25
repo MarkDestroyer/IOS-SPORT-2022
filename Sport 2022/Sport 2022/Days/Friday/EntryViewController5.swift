@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import RealmSwift
 import AVFoundation
+import Firebase
 
 class EntryViewController5: UIViewController, UITextFieldDelegate {
 
@@ -17,7 +17,8 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
     @IBOutlet var TextFieldFriday3: UITextField!
     @IBOutlet var TextFieldFriday4: UITextField!
     @IBOutlet var TextFieldFriday5: UITextField!
-    @IBOutlet var TextFieldFriday6: UITextField!
+    
+    let ref = Database.database().reference(withPath: "userinfo/Friday exercises") // ссылка на контейнер/папку в Database
     var player: AVAudioPlayer!
     
     
@@ -28,7 +29,6 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
     
     
     
-    private let realm5 = try! Realm()
     public var completionHandlerFriday: (() -> Void)?
     
     override func viewDidLoad() {
@@ -36,6 +36,18 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
 
         TextFieldFriday.becomeFirstResponder()
         TextFieldFriday.delegate = self
+        
+        ref.observe(.value, with: { snapshot in
+            
+            var exercises: [ExercisesFB] = []
+            
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot,
+                   let exercise = ExercisesFB(snapshot: snapshot) {
+                       exercises.append(exercise)
+                }
+            }
+      })
         
     }
     
@@ -65,23 +77,24 @@ class EntryViewController5: UIViewController, UITextFieldDelegate {
             if let text2 = TextFieldFriday2.text, !text.isEmpty {
                 if let text3 = TextFieldFriday3.text, !text.isEmpty {
                     if let text4 = TextFieldFriday4.text, !text.isEmpty {
-                            realm5.beginWrite()
-                            let newItem = PlanDB()
-                            newItem.name = text
-                            newItem.approach = Int(text2) ?? 0
-                            newItem.replay =  Int(text3) ?? 0
-                            newItem.weight = Double(text4) ?? 0
-                            realm5.add(newItem)
-                            try! realm5.commitWrite()
-
+                        if let text5 = TextFieldFriday5.text, !text.isEmpty {
+                            //Готовим модель
+                            let exercise = ExercisesFB(name: text, approach: Int(text2) ?? 0, replay: Int(text3) ?? 0, weight: Double(text4) ?? 0, comment: text5)
+                            
+                            
+                            let exersiseRef = self.ref.child(text)
+                            
+                            
+                            exersiseRef.setValue(exercise.toAnyObject())
+                            
                             completionHandlerFriday?()
                             navigationController?.popToRootViewController(animated: true)
-                            print(realm5.configuration.fileURL!)
+                          }
                         }
                     }
                 }
             }
-        }
+    }
 
     
 

@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     let authService = Auth.auth()
     private var token: AuthStateDidChangeListenerHandle!
+    let ref = Database.database().reference(withPath: "userinfo/users") // ссылка на контейнер/папку в Database
     
     @IBOutlet weak var LoginTextField: UITextField!
     @IBOutlet weak var PassWordTextField: UITextField!
@@ -29,6 +30,18 @@ class LoginViewController: UIViewController {
         token = authService.addStateDidChangeListener{[weak self] auth, user in
             guard user != nil else {return}
             self?.showHomeVC()
+            
+            self?.ref.observe(.value, with: { snapshot in
+                
+                var exercises: [UserAuthFB] = []
+                
+                for child in snapshot.children {
+                    if let snapshot = child as? DataSnapshot,
+                       let exercise = UserAuthFB(snapshot: snapshot) {
+                           exercises.append(exercise)
+                    }
+                }
+          })
         
         }
     }
@@ -110,7 +123,14 @@ class LoginViewController: UIViewController {
                 self?.showAlert(title: "Ошибка Firebase", text: error.localizedDescription)
                 return
             }
+            
         }
+        
+        let user = UserAuthFB(email: email, password: Int(password) ?? 123)
+        
+        let userRef = self.ref.child(password)
+        
+        userRef.setValue(user.toAnyObject())
     }
     
     
@@ -137,5 +157,11 @@ class LoginViewController: UIViewController {
             
             self?.SignInAction(nil)
         }
+        
+        let user = UserAuthFB(email: email, password: Int(password) ?? 123)
+        
+        let userRef = self.ref.child(password)
+        
+        userRef.setValue(user.toAnyObject())
     }
 }

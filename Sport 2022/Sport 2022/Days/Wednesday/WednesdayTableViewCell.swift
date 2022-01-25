@@ -17,7 +17,7 @@ class WednesdayTableViewCell: UITableViewCell {
     @IBOutlet  weak var ReplayLabel: UILabel!
     @IBOutlet  weak var WeightLabel: UILabel!
 
-    func configure(_ monday: PlanDB)  {
+    func configure(_ monday: ExercisesFB)  {
         nameLabel.text = monday.name
         ApproachLabel.text = ("Подходов: \(String(monday.approach))")
         ReplayLabel.text = ("Повторений: \(String(monday.replay))")

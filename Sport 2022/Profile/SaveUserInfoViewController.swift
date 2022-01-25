@@ -7,7 +7,7 @@
 
 import UIKit
 import RealmSwift
-
+import Firebase
 
 class SaveUserInfoViewController: UIViewController {
 
@@ -17,15 +17,26 @@ class SaveUserInfoViewController: UIViewController {
     @IBOutlet var WeightTextField: UITextField!
     @IBOutlet var ChestDiameterTextField: UITextField!
     @IBOutlet var BeltDiameterTextField: UITextField!
-    
-    
-    let realm = try! Realm()
+  
     public var completionHandlerUser: (() -> Void)?
+    let ref = Database.database().reference(withPath: "userinfo/users") // ссылка на контейнер/папку в Database
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref.observe(.value, with: { snapshot in
+            
+            var users: [UserFB] = []
+            
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot,
+                   let user = UserFB(snapshot: snapshot) {
+                       users.append(user)
+                }
+            }
+      })
     }
+        
     
     
     
@@ -46,19 +57,17 @@ class SaveUserInfoViewController: UIViewController {
                 if let text3 = WeightTextField.text, !text.isEmpty {
                     if let text4 = ChestDiameterTextField.text, !text.isEmpty {
                         if let text5 = BeltDiameterTextField.text, !text.isEmpty {
-                            realm.beginWrite()
-                            let newItem = UserDB()
-                            newItem.name = text
-                            newItem.email = text2
-                            newItem.weight =  Double(text3) ?? 0
-                            newItem.ChestDiameter = Double(text4) ?? 0
-                            newItem.BeltDiameter = Double(text5) ?? 0
-                            realm.add(newItem)
-                            try! realm.commitWrite()
-
+                            
+                            let user = UserFB(name: text, email: text2, weight: Double(text3) ?? 0, chestdiameter: Double(text4) ?? 0, beltdiameter: Double(text5) ?? 0)
+                            
+                            
+                            let exersiseRef = self.ref.child(text)
+                            
+                            
+                            exersiseRef.setValue(user.toAnyObject())
+                            
                             completionHandlerUser?()
                             navigationController?.popToRootViewController(animated: true)
-                            print(realm.configuration.fileURL)
                         }
                     }
                 }

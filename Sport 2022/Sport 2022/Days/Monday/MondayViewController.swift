@@ -1,28 +1,30 @@
 //
-//  FridayViewController.swift
+//  MondayViewController.swift
 //  Sport 2022
 //
 //  Created by Марк Киричко on 25.12.2021.
 //
+
 
 import UIKit
 import RealmSwift
 import AVFoundation
 import Firebase
 
-class FridayViewController: UITableViewController {
-    
+class MondayViewController: UITableViewController {
     
     var player: AVAudioPlayer!
     
     private var exercises = [ExercisesFB]()
-    private let ref = Database.database().reference(withPath: "userinfo/Friday exercises")
+    private let ref = Database.database().reference(withPath: "userinfo/Monday exercises")
     
-    
+    let config = Realm.Configuration(schemaVersion: 4)
+    lazy var realm = try! Realm(configuration: config)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //1
             ref.observe(.value, with: { snapshot in
                 var exercises: [ExercisesFB] = []
@@ -40,8 +42,16 @@ class FridayViewController: UITableViewController {
 
     }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let exercise = exercises[indexPath.row]
+            exercise.ref?.removeValue()
+        }
+    }
 
+    
+    
     func playAudio() {
         let url = Bundle.main.url(forResource: "complete", withExtension: "mp3")
         
@@ -72,13 +82,8 @@ class FridayViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            let exercise = exercises[indexPath.row]
-            exercise.ref?.removeValue()
-        }
-    }
+    
+    
     
     // MARK: - Table view data source
     
@@ -87,16 +92,17 @@ class FridayViewController: UITableViewController {
     }
     
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let exercise = exercises[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: FridayTableViewCell.identifier, for: indexPath) as! FridayTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MondayTableViewCell.identifier, for: indexPath) as! MondayTableViewCell
         
         cell.configure(exercise)
         
+        
         return cell
     }
-    
 }
 

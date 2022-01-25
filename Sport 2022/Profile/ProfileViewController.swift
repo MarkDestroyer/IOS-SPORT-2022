@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 import Firebase
 
 class ProfileViewController: UIViewController {
@@ -20,12 +19,51 @@ class ProfileViewController: UIViewController {
     @IBOutlet var BeltDiameterLabel: UILabel!
     
     let authService = Auth.auth()
-    var user: Array<UserDB> = [UserDB]()
+    private var users = [UserAuthFB]()
+    let ref = Database.database().reference(withPath: "userinfo/users") // ссылка на контейнер/папку в Database
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        
+        //1
+           ref.observe(.value, with: { snapshot in
+               
+               var users: [UserAuthFB] = []
+               var settings: [UserFB] = []
+               // 2
+               for child in snapshot.children {
+                   if let snapshot = child as? DataSnapshot,
+                      let user = UserAuthFB(snapshot: snapshot) {
+                          users.append(user)
+                       self.EmailLabel.text = user.email
+                       
+                   }
+                
+               }
+               
+               for child in snapshot.children {
+                   if let snapshot = child as? DataSnapshot,
+                      let setting = UserFB(snapshot: snapshot) {
+                          settings.append(setting)
+                       self.NameLabel.text = setting.name
+                       self.EmailLabel.text = setting.email
+                       self.WeightLabel.text = ("Вес: \(String(setting.weight)) кг")
+                       self.ChestDiameterLabel.text = ("Диаметр груди: \(String(setting.chestdiameter)) мм")
+                       self.BeltDiameterLabel.text = ("Диаметр пояса: \(String(setting.chestdiameter)) мм")
+                
+                   }
+                
+               }
+
+           })
     }
+    
+    
+    
+    
+    
     
     @IBAction func loadPhoto() {
         let vc = UIImagePickerController()
@@ -47,33 +85,6 @@ class ProfileViewController: UIViewController {
         try?authService.signOut()
         showLoginVC()
     }
-    
-    func loadData() {
-            do {
-                let realm = try Realm()
-
-                let userinfo = realm.objects(UserDB.self)
-
-                self.user = Array(userinfo)
-
-                for person in user {
-                    let firstname = person.name
-                    let email = person.email
-                    let weight = person.weight
-                    let chestdiameter = person.ChestDiameter
-                    let beltdiameter = person.BeltDiameter
-                    NameLabel.text = firstname
-                    EmailLabel.text = email
-                    WeightLabel.text = ("Вес \(String(weight)) кг")
-                    ChestDiameterLabel.text = ("Диаметр груди \(String(chestdiameter)) мм")
-                    BeltDiameterLabel.text = ("Диаметр пояса \(String(beltdiameter)) мм")
-                }
-            } catch {
-                // если произошла ошибка, выводим ее в консоль
-                print(error)
-            }
-        }
-
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

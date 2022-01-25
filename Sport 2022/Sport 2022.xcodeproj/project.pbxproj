@@ -15,6 +15,8 @@
 		821C310D27772B8200501189 /* EntryViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C310C27772B8200501189 /* EntryViewController4.swift */; };
 		821C31102777304B00501189 /* FridayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C310F2777304B00501189 /* FridayViewController.swift */; };
 		821C31122777305600501189 /* EntryViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C31112777305600501189 /* EntryViewController5.swift */; };
+		822B081F27974A3900AFE4BD /* ExercisesFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B081E27974A3900AFE4BD /* ExercisesFB.swift */; };
+		822B08212797561700AFE4BD /* UserFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822B08202797561700AFE4BD /* UserFB.swift */; };
 		82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82576DCB277470BC003A40B1 /* AppDelegate.swift */; };
 		82576DCE277470BC003A40B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82576DCD277470BC003A40B1 /* SceneDelegate.swift */; };
 		82576DD3277470BC003A40B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD1277470BC003A40B1 /* Main.storyboard */; };
@@ -47,6 +49,7 @@
 		8287784B2794992A00FE442B /* растяжка.png in Resources */ = {isa = PBXBuildFile; fileRef = 828778472794992A00FE442B /* растяжка.png */; };
 		8287784C2794992A00FE442B /* пресс.png in Resources */ = {isa = PBXBuildFile; fileRef = 828778482794992A00FE442B /* пресс.png */; };
 		8287784D2794992A00FE442B /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 828778492794992A00FE442B /* sport.gif */; };
+		82A0209027988F90001BE9A6 /* UserAuthFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0208F27988F90001BE9A6 /* UserAuthFB.swift */; };
 		82A530BE277BC4D800926ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82A530BD277BC4D800926ABE /* GoogleService-Info.plist */; };
 		82A530C1277BC8F400926ABE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C0277BC8F400926ABE /* LoginViewController.swift */; };
 		82A530C3277BC97400926ABE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A530C2277BC97400926ABE /* HomeViewController.swift */; };
@@ -64,6 +67,8 @@
 		821C310C27772B8200501189 /* EntryViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController4.swift; sourceTree = "<group>"; };
 		821C310F2777304B00501189 /* FridayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayViewController.swift; sourceTree = "<group>"; };
 		821C31112777305600501189 /* EntryViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController5.swift; sourceTree = "<group>"; };
+		822B081E27974A3900AFE4BD /* ExercisesFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesFB.swift; sourceTree = "<group>"; };
+		822B08202797561700AFE4BD /* UserFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFB.swift; sourceTree = "<group>"; };
 		82576DC8277470BC003A40B1 /* Sport 2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sport 2022.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82576DCB277470BC003A40B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82576DCD277470BC003A40B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 		828778472794992A00FE442B /* растяжка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "растяжка.png"; path = "../../../../../Фитнес/растяжка.png"; sourceTree = "<group>"; };
 		828778482794992A00FE442B /* пресс.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "пресс.png"; path = "../../../../../Фитнес/пресс.png"; sourceTree = "<group>"; };
 		828778492794992A00FE442B /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sport.gif; path = "../../../../../Фитнес/sport.gif"; sourceTree = "<group>"; };
+		82A0208F27988F90001BE9A6 /* UserAuthFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthFB.swift; sourceTree = "<group>"; };
 		82A530BD277BC4D800926ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82A530C0277BC8F400926ABE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82A530C2277BC97400926ABE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -137,8 +143,8 @@
 		821C31032777223100501189 /* Wednesday */ = {
 			isa = PBXGroup;
 			children = (
-				821C31042777224200501189 /* WednesdayViewController.swift */,
 				821C31072777232500501189 /* EntryViewController3.swift */,
+				821C31042777224200501189 /* WednesdayViewController.swift */,
 				8287783B279478FC00FE442B /* WednesdayTableViewCell.swift */,
 			);
 			path = Wednesday;
@@ -156,16 +162,27 @@
 		821C310E2777303D00501189 /* Friday */ = {
 			isa = PBXGroup;
 			children = (
-				821C310F2777304B00501189 /* FridayViewController.swift */,
 				821C31112777305600501189 /* EntryViewController5.swift */,
+				821C310F2777304B00501189 /* FridayViewController.swift */,
 				8287783D27947CBA00FE442B /* FridayTableViewCell.swift */,
 			);
 			path = Friday;
 			sourceTree = "<group>";
 		};
+		822B081D279748DE00AFE4BD /* FB */ = {
+			isa = PBXGroup;
+			children = (
+				822B081E27974A3900AFE4BD /* ExercisesFB.swift */,
+				822B08202797561700AFE4BD /* UserFB.swift */,
+				82A0208F27988F90001BE9A6 /* UserAuthFB.swift */,
+			);
+			path = FB;
+			sourceTree = "<group>";
+		};
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
+				822B081D279748DE00AFE4BD /* FB */,
 				8287783F27948A0800FE442B /* Design */,
 				8287782A279435F800FE442B /* Images */,
 				82710C332790000E00FC2E8E /* Profile */,
@@ -194,7 +211,6 @@
 				82CBF8E32775C8F8009B9926 /* Days */,
 				82576DCB277470BC003A40B1 /* AppDelegate.swift */,
 				82576DCD277470BC003A40B1 /* SceneDelegate.swift */,
-				8282AA2B27769702009471C5 /* MondayViewController.swift */,
 				82576DD1277470BC003A40B1 /* Main.storyboard */,
 				82576DD4277470BE003A40B1 /* Assets.xcassets */,
 				82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */,
@@ -293,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				8282AA2D2776988C009471C5 /* EntryViewController.swift */,
+				8282AA2B27769702009471C5 /* MondayViewController.swift */,
 				828778282794291300FE442B /* MondayTableViewCell.swift */,
 			);
 			path = Monday;
@@ -436,6 +453,7 @@
 				821C31082777232500501189 /* EntryViewController3.swift in Sources */,
 				828778292794291300FE442B /* MondayTableViewCell.swift in Sources */,
 				8287784127948A1D00FE442B /* Gradient.swift in Sources */,
+				82A0209027988F90001BE9A6 /* UserAuthFB.swift in Sources */,
 				82710C29278FF8A600FC2E8E /* PlanDB.swift in Sources */,
 				82710C23278FF6FD00FC2E8E /* BodyUserDB.swift in Sources */,
 				82710C21278FF69E00FC2E8E /* BodyParametersDB.swift in Sources */,
@@ -454,7 +472,9 @@
 				82710C362790003800FC2E8E /* ProfileViewController.swift in Sources */,
 				82710C382790011A00FC2E8E /* SaveUserInfoViewController.swift in Sources */,
 				821C31052777224300501189 /* WednesdayViewController.swift in Sources */,
+				822B08212797561700AFE4BD /* UserFB.swift in Sources */,
 				82710C25278FF7B500FC2E8E /* MusclesDB.swift in Sources */,
+				822B081F27974A3900AFE4BD /* ExercisesFB.swift in Sources */,
 				82710C1F278FF5D600FC2E8E /* UserDB.swift in Sources */,
 				82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */,
 				8287783C279478FC00FE442B /* WednesdayTableViewCell.swift in Sources */,

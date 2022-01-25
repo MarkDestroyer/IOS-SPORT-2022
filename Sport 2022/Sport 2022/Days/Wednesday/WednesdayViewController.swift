@@ -8,37 +8,35 @@
 import UIKit
 import RealmSwift
 import AVFoundation
+import Firebase
 
 class WednesdayViewController: UITableViewController {
     
-    let planDB = PlanDB()
     
     var player: AVAudioPlayer!
     
-    let config = Realm.Configuration(schemaVersion: 4)
-    lazy var realm = try! Realm(configuration: config)
-    
-    var exercises: Results<PlanDB>?
+    private var exercises = [ExercisesFB]()
+    private let ref = Database.database().reference(withPath: "userinfo/Wednesday exercises")
 
 
-    func loadData() {
-        do {
-            let realm = try Realm()
-            
-            let userinfo = realm.objects(PlanDB.self)
-            
-            self.exercises = (userinfo)
-            
-        } catch {
-            // если произошла ошибка, выводим ее в консоль
-            print(error)
-        }
-    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        //1
+            ref.observe(.value, with: { snapshot in
+                var exercises: [ExercisesFB] = []
+                // 2
+                for child in snapshot.children {
+                    if let snapshot = child as? DataSnapshot,
+                       let exercise = ExercisesFB(snapshot: snapshot) {
+                           exercises.append(exercise)
+                    }
+                }
+                // 3
+                self.exercises = exercises
+                self.tableView.reloadData()
+            })
     }
     
     
@@ -73,40 +71,27 @@ class WednesdayViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete{
-            if let item = exercises?[indexPath.row] {
-                try! realm.write {
-                    realm.delete(item)
-                    playAudio2()
-                }
-                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-            }
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let exercise = exercises[indexPath.row]
+            exercise.ref?.removeValue()
         }
     }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercises?.count ?? 0
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
-        playAudio()
-    }
-
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath as IndexPath)?.accessoryType = .checkmark
+        return exercises.count 
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let exercise = exercises[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: WednesdayTableViewCell.identifier, for: indexPath) as! WednesdayTableViewCell
         
-        
-        
-        cell.configure((exercises?[indexPath.row])! )
+        cell.configure(exercise)
         
         return cell
     }

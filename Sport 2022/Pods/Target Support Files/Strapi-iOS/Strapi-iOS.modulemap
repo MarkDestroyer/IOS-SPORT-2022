@@ -1,0 +1,6 @@
+framework module Strapi_iOS {
+  umbrella header "Strapi-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

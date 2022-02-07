@@ -7,35 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		821C31002777179600501189 /* TuesdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C30FF2777179600501189 /* TuesdayViewController.swift */; };
-		821C31022777195900501189 /* EntryViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C31012777195900501189 /* EntryViewController2.swift */; };
-		821C31052777224300501189 /* WednesdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C31042777224200501189 /* WednesdayViewController.swift */; };
+		8212803827AC827500EDCE44 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803727AC827500EDCE44 /* UserProfile.swift */; };
+		8212803A27AC829900EDCE44 /* TrainingPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803927AC829900EDCE44 /* TrainingPlanModel.swift */; };
+		8212803E27AC833F00EDCE44 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803D27AC833F00EDCE44 /* LoginViewController.swift */; };
+		8212804027AC836E00EDCE44 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212803F27AC836E00EDCE44 /* Session.swift */; };
+		8212804227AC838D00EDCE44 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212804127AC838D00EDCE44 /* ExerciseViewController.swift */; };
+		8212804427AC83A200EDCE44 /* PlanDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212804327AC83A200EDCE44 /* PlanDayViewController.swift */; };
+		8212804627AC83C800EDCE44 /* ExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8212804527AC83C800EDCE44 /* ExerciseAPI.swift */; };
 		821C31082777232500501189 /* EntryViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C31072777232500501189 /* EntryViewController3.swift */; };
-		821C310B27772AFC00501189 /* ThursdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C310A27772AFC00501189 /* ThursdayViewController.swift */; };
-		821C310D27772B8200501189 /* EntryViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C310C27772B8200501189 /* EntryViewController4.swift */; };
-		821C31102777304B00501189 /* FridayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C310F2777304B00501189 /* FridayViewController.swift */; };
 		821C31122777305600501189 /* EntryViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C31112777305600501189 /* EntryViewController5.swift */; };
+		82242ED427AEE749005F02A5 /* ExerciseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82242ED327AEE749005F02A5 /* ExerciseDB.swift */; };
+		82242ED627AEE760005F02A5 /* PlanDayDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82242ED527AEE760005F02A5 /* PlanDayDB.swift */; };
+		82242EDD27AEFAD9005F02A5 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82242EDC27AEFAD9005F02A5 /* SelectDateViewController.swift */; };
+		822781F427AD5B82001E6916 /* TrainingPlanApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822781F327AD5B82001E6916 /* TrainingPlanApi.swift */; };
+		822781F627AD5B9E001E6916 /* CreateExerciseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822781F527AD5B9E001E6916 /* CreateExerciseAPI.swift */; };
+		823BD10927ABAC5200C88DAB /* sport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 823BD10827ABAC5200C88DAB /* sport.gif */; };
+		824D0D1627AAFC36006305D7 /* PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D0D1527AAFC36006305D7 /* PrettyJSON.swift */; };
+		824EE21F27AD6F0100C2F945 /* ResponseCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824EE21E27AD6F0100C2F945 /* ResponseCreate.swift */; };
 		82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82576DCB277470BC003A40B1 /* AppDelegate.swift */; };
 		82576DCE277470BC003A40B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82576DCD277470BC003A40B1 /* SceneDelegate.swift */; };
 		82576DD3277470BC003A40B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD1277470BC003A40B1 /* Main.storyboard */; };
 		82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD4277470BE003A40B1 /* Assets.xcassets */; };
 		82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82576DD6277470BE003A40B1 /* LaunchScreen.storyboard */; };
-		8282AA2C27769702009471C5 /* MondayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2B27769702009471C5 /* MondayViewController.swift */; };
+		826183F12785153600F554F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826183F02785153600F554F9 /* TimerViewController.swift */; };
+		82710C2E278FF9FA00FC2E8E /* complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82710C2D278FF9FA00FC2E8E /* complete.mp3 */; };
+		82710C30278FFA0F00FC2E8E /* save.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82710C2F278FFA0F00FC2E8E /* save.mp3 */; };
+		82710C32278FFA3400FC2E8E /* delete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82710C31278FFA3400FC2E8E /* delete.mp3 */; };
 		8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8282AA2D2776988C009471C5 /* EntryViewController.swift */; };
+		8285115827A97C3B00D67B2C /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285115427A97C3B00D67B2C /* ExercisesModel.swift */; };
+		8285115927A97C3B00D67B2C /* customModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285115527A97C3B00D67B2C /* customModel.swift */; };
+		8287784127948A1D00FE442B /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784027948A1D00FE442B /* Gradient.swift */; };
+		8287784327948C7000FE442B /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8287784227948C7000FE442B /* GIF.swift */; };
 		D8D4895BCF01039A3879B2D8 /* Pods_Sport_2022.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD59EB16C9E805A31A8BE446 /* Pods_Sport_2022.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B3367484C50EA9D07B95E3F /* Pods-Sport 2022.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sport 2022.debug.xcconfig"; path = "Target Support Files/Pods-Sport 2022/Pods-Sport 2022.debug.xcconfig"; sourceTree = "<group>"; };
 		69AD60DC201E8F4DA3438B38 /* Pods-Sport 2022.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sport 2022.release.xcconfig"; path = "Target Support Files/Pods-Sport 2022/Pods-Sport 2022.release.xcconfig"; sourceTree = "<group>"; };
-		821C30FF2777179600501189 /* TuesdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuesdayViewController.swift; sourceTree = "<group>"; };
-		821C31012777195900501189 /* EntryViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController2.swift; sourceTree = "<group>"; };
-		821C31042777224200501189 /* WednesdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WednesdayViewController.swift; sourceTree = "<group>"; };
+		8212803727AC827500EDCE44 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		8212803927AC829900EDCE44 /* TrainingPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlanModel.swift; sourceTree = "<group>"; };
+		8212803D27AC833F00EDCE44 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8212803F27AC836E00EDCE44 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		8212804127AC838D00EDCE44 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		8212804327AC83A200EDCE44 /* PlanDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDayViewController.swift; sourceTree = "<group>"; };
+		8212804527AC83C800EDCE44 /* ExerciseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAPI.swift; sourceTree = "<group>"; };
 		821C31072777232500501189 /* EntryViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController3.swift; sourceTree = "<group>"; };
-		821C310A27772AFC00501189 /* ThursdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThursdayViewController.swift; sourceTree = "<group>"; };
-		821C310C27772B8200501189 /* EntryViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController4.swift; sourceTree = "<group>"; };
-		821C310F2777304B00501189 /* FridayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridayViewController.swift; sourceTree = "<group>"; };
 		821C31112777305600501189 /* EntryViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController5.swift; sourceTree = "<group>"; };
+		82242ED327AEE749005F02A5 /* ExerciseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDB.swift; sourceTree = "<group>"; };
+		82242ED527AEE760005F02A5 /* PlanDayDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDayDB.swift; sourceTree = "<group>"; };
+		82242EDC27AEFAD9005F02A5 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		822781F327AD5B82001E6916 /* TrainingPlanApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPlanApi.swift; sourceTree = "<group>"; };
+		822781F527AD5B9E001E6916 /* CreateExerciseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseAPI.swift; sourceTree = "<group>"; };
+		823BD10827ABAC5200C88DAB /* sport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sport.gif; sourceTree = "<group>"; };
+		824D0D1527AAFC36006305D7 /* PrettyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyJSON.swift; sourceTree = "<group>"; };
+		824EE21E27AD6F0100C2F945 /* ResponseCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCreate.swift; sourceTree = "<group>"; };
 		82576DC8277470BC003A40B1 /* Sport 2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sport 2022.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82576DCB277470BC003A40B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82576DCD277470BC003A40B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +68,15 @@
 		82576DD4277470BE003A40B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82576DD7277470BE003A40B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82576DD9277470BE003A40B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8282AA2B27769702009471C5 /* MondayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondayViewController.swift; sourceTree = "<group>"; };
+		826183F02785153600F554F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		82710C2D278FF9FA00FC2E8E /* complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = complete.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/complete.mp3"; sourceTree = "<group>"; };
+		82710C2F278FFA0F00FC2E8E /* save.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = save.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/save.mp3"; sourceTree = "<group>"; };
+		82710C31278FFA3400FC2E8E /* delete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = delete.mp3; path = "../../../../../../Music/Music/Media.localized/Unknown Artist/Unknown Album/delete.mp3"; sourceTree = "<group>"; };
 		8282AA2D2776988C009471C5 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		8285115427A97C3B00D67B2C /* ExercisesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesModel.swift; sourceTree = "<group>"; };
+		8285115527A97C3B00D67B2C /* customModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customModel.swift; sourceTree = "<group>"; };
+		8287784027948A1D00FE442B /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		8287784227948C7000FE442B /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 		AD59EB16C9E805A31A8BE446 /* Pods_Sport_2022.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sport_2022.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,45 +101,71 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		821C30FE2777177500501189 /* Tuesday */ = {
-			isa = PBXGroup;
-			children = (
-				821C30FF2777179600501189 /* TuesdayViewController.swift */,
-				821C31012777195900501189 /* EntryViewController2.swift */,
-			);
-			path = Tuesday;
-			sourceTree = "<group>";
-		};
 		821C31032777223100501189 /* Wednesday */ = {
 			isa = PBXGroup;
 			children = (
-				821C31042777224200501189 /* WednesdayViewController.swift */,
 				821C31072777232500501189 /* EntryViewController3.swift */,
 			);
 			path = Wednesday;
 			sourceTree = "<group>";
 		};
-		821C310927772ADE00501189 /* Thursday */ = {
-			isa = PBXGroup;
-			children = (
-				821C310A27772AFC00501189 /* ThursdayViewController.swift */,
-				821C310C27772B8200501189 /* EntryViewController4.swift */,
-			);
-			path = Thursday;
-			sourceTree = "<group>";
-		};
 		821C310E2777303D00501189 /* Friday */ = {
 			isa = PBXGroup;
 			children = (
-				821C310F2777304B00501189 /* FridayViewController.swift */,
 				821C31112777305600501189 /* EntryViewController5.swift */,
 			);
 			path = Friday;
 			sourceTree = "<group>";
 		};
+		82242ED227AEE73C005F02A5 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				82242ED327AEE749005F02A5 /* ExerciseDB.swift */,
+				82242ED527AEE760005F02A5 /* PlanDayDB.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		822781F127AD5A41001E6916 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8287784227948C7000FE442B /* GIF.swift */,
+				824D0D1527AAFC36006305D7 /* PrettyJSON.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		822781F227AD5B0E001E6916 /* API-Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8212803D27AC833F00EDCE44 /* LoginViewController.swift */,
+				8212804327AC83A200EDCE44 /* PlanDayViewController.swift */,
+				8212804127AC838D00EDCE44 /* ExerciseViewController.swift */,
+				82242EDC27AEFAD9005F02A5 /* SelectDateViewController.swift */,
+			);
+			path = "API-Controllers";
+			sourceTree = "<group>";
+		};
+		823BD10527ABAC1600C88DAB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				823BD10827ABAC5200C88DAB /* sport.gif */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		82576DBF277470BC003A40B1 = {
 			isa = PBXGroup;
 			children = (
+				82242ED227AEE73C005F02A5 /* DB */,
+				822781F227AD5B0E001E6916 /* API-Controllers */,
+				822781F127AD5A41001E6916 /* Extensions */,
+				823BD10527ABAC1600C88DAB /* Images */,
+				8285115C27A97C4F00D67B2C /* Models */,
+				82E9E88427A73E18003677CC /* API */,
+				8287783F27948A0800FE442B /* Design */,
+				82710C2C278FF9D300FC2E8E /* Sounds */,
+				82710C342790001F00FC2E8E /* Timer */,
 				82576DCA277470BC003A40B1 /* Sport 2022 */,
 				82576DC9277470BC003A40B1 /* Products */,
 				4FC0DB907434DAAA75A12EDF /* Pods */,
@@ -137,13 +195,49 @@
 			path = "Sport 2022";
 			sourceTree = "<group>";
 		};
+		82710C2C278FF9D300FC2E8E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				82710C2F278FFA0F00FC2E8E /* save.mp3 */,
+				82710C31278FFA3400FC2E8E /* delete.mp3 */,
+				82710C2D278FF9FA00FC2E8E /* complete.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		82710C342790001F00FC2E8E /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				826183F02785153600F554F9 /* TimerViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		8285115C27A97C4F00D67B2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8285115527A97C3B00D67B2C /* customModel.swift */,
+				8212803727AC827500EDCE44 /* UserProfile.swift */,
+				8285115427A97C3B00D67B2C /* ExercisesModel.swift */,
+				8212803927AC829900EDCE44 /* TrainingPlanModel.swift */,
+				824EE21E27AD6F0100C2F945 /* ResponseCreate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8287783F27948A0800FE442B /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				8287784027948A1D00FE442B /* Gradient.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		82CBF8E32775C8F8009B9926 /* Days */ = {
 			isa = PBXGroup;
 			children = (
 				821C310E2777303D00501189 /* Friday */,
-				821C310927772ADE00501189 /* Thursday */,
 				821C31032777223100501189 /* Wednesday */,
-				821C30FE2777177500501189 /* Tuesday */,
 				82CBF8EE277612A9009B9926 /* Monday */,
 			);
 			path = Days;
@@ -152,10 +246,20 @@
 		82CBF8EE277612A9009B9926 /* Monday */ = {
 			isa = PBXGroup;
 			children = (
-				8282AA2B27769702009471C5 /* MondayViewController.swift */,
 				8282AA2D2776988C009471C5 /* EntryViewController.swift */,
 			);
 			path = Monday;
+			sourceTree = "<group>";
+		};
+		82E9E88427A73E18003677CC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8212803F27AC836E00EDCE44 /* Session.swift */,
+				8212804527AC83C800EDCE44 /* ExerciseAPI.swift */,
+				822781F327AD5B82001E6916 /* TrainingPlanApi.swift */,
+				822781F527AD5B9E001E6916 /* CreateExerciseAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		EBABAE4FF1008B9D5F4BCEBA /* Frameworks */ = {
@@ -227,8 +331,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				82576DD8277470BE003A40B1 /* LaunchScreen.storyboard in Resources */,
+				82710C2E278FF9FA00FC2E8E /* complete.mp3 in Resources */,
+				82710C32278FFA3400FC2E8E /* delete.mp3 in Resources */,
 				82576DD5277470BE003A40B1 /* Assets.xcassets in Resources */,
 				82576DD3277470BC003A40B1 /* Main.storyboard in Resources */,
+				82710C30278FFA0F00FC2E8E /* save.mp3 in Resources */,
+				823BD10927ABAC5200C88DAB /* sport.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,18 +389,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8282AA2C27769702009471C5 /* MondayViewController.swift in Sources */,
+				8212804027AC836E00EDCE44 /* Session.swift in Sources */,
+				82242ED427AEE749005F02A5 /* ExerciseDB.swift in Sources */,
+				8212804227AC838D00EDCE44 /* ExerciseViewController.swift in Sources */,
 				821C31082777232500501189 /* EntryViewController3.swift in Sources */,
-				821C310D27772B8200501189 /* EntryViewController4.swift in Sources */,
-				821C310B27772AFC00501189 /* ThursdayViewController.swift in Sources */,
-				821C31002777179600501189 /* TuesdayViewController.swift in Sources */,
-				821C31022777195900501189 /* EntryViewController2.swift in Sources */,
-				821C31102777304B00501189 /* FridayViewController.swift in Sources */,
+				824D0D1627AAFC36006305D7 /* PrettyJSON.swift in Sources */,
+				8287784127948A1D00FE442B /* Gradient.swift in Sources */,
+				82242EDD27AEFAD9005F02A5 /* SelectDateViewController.swift in Sources */,
+				8212803E27AC833F00EDCE44 /* LoginViewController.swift in Sources */,
+				8285115827A97C3B00D67B2C /* ExercisesModel.swift in Sources */,
+				822781F627AD5B9E001E6916 /* CreateExerciseAPI.swift in Sources */,
+				8212803A27AC829900EDCE44 /* TrainingPlanModel.swift in Sources */,
+				8287784327948C7000FE442B /* GIF.swift in Sources */,
+				8212804427AC83A200EDCE44 /* PlanDayViewController.swift in Sources */,
 				821C31122777305600501189 /* EntryViewController5.swift in Sources */,
 				8282AA2E2776988C009471C5 /* EntryViewController.swift in Sources */,
-				821C31052777224300501189 /* WednesdayViewController.swift in Sources */,
+				826183F12785153600F554F9 /* TimerViewController.swift in Sources */,
+				822781F427AD5B82001E6916 /* TrainingPlanApi.swift in Sources */,
+				8212803827AC827500EDCE44 /* UserProfile.swift in Sources */,
+				8285115927A97C3B00D67B2C /* customModel.swift in Sources */,
+				82242ED627AEE760005F02A5 /* PlanDayDB.swift in Sources */,
+				8212804627AC83C800EDCE44 /* ExerciseAPI.swift in Sources */,
 				82576DCC277470BC003A40B1 /* AppDelegate.swift in Sources */,
 				82576DCE277470BC003A40B1 /* SceneDelegate.swift in Sources */,
+				824EE21F27AD6F0100C2F945 /* ResponseCreate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

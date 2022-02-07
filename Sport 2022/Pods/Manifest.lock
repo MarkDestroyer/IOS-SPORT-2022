@@ -1,22 +1,30 @@
 PODS:
+  - CalendarSwift (0.1.9)
   - Realm (10.12.0):
     - Realm/Headers (= 10.12.0)
   - Realm/Headers (10.12.0)
   - RealmSwift (10.12.0):
     - Realm (= 10.12.0)
+  - Strapi-iOS (0.1.1)
 
 DEPENDENCIES:
+  - CalendarSwift
   - RealmSwift
+  - Strapi-iOS
 
 SPEC REPOS:
   trunk:
+    - CalendarSwift
     - Realm
     - RealmSwift
+    - Strapi-iOS
 
 SPEC CHECKSUMS:
+  CalendarSwift: 37ab02721718952d5eb5e369cac7ab2414e08625
   Realm: 32488213acb44660539c619d620cec1bac046166
   RealmSwift: 0abdca6231d5ff8a4f84cef9c1121ef95a483faf
+  Strapi-iOS: 9b9ac09434f1798d2fcbedd2c0fa812349ff0252
 
-PODFILE CHECKSUM: d4ee2aef74cbe379f398394be34a5aafc9120d25
+PODFILE CHECKSUM: 07e4ff9b679cccf5075c41312a77a3aaeaa23250
 
 COCOAPODS: 1.10.2

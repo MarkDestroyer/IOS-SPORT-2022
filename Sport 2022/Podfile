@@ -6,7 +6,9 @@ target 'Sport 2022' do
   use_frameworks!
 
   pod 'RealmSwift'
-  
-  # Pods for Sport 2022
 
+  pod 'CalendarSwift'
+  
+  pod 'Strapi-iOS'
+  
 end
